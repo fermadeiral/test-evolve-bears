@@ -1,0 +1,155 @@
+[
+  {
+    "tests": {
+      "overallMetrics": {
+        "numberPassing": 386,
+        "numberRunning": 387,
+        "numberFailing": 1,
+        "numberErroring": 0,
+        "failures": [
+          {
+            "failureName": "java.lang.AssertionError",
+            "isError": false,
+            "occurrences": 1
+          }
+        ],
+        "numberSkipping": 0
+      },
+      "failingModule": "/root/workspace/jboss/metadata/431032020/web",
+      "failureDetails": [
+        {
+          "failureName": "java.lang.AssertionError",
+          "detail": "<replication-config/> is no longer valid",
+          "isError": false,
+          "testMethod": "testReplicationConfig",
+          "testClass": "org.jboss.test.metadata.web.JBossWeb130UnitTestCase"
+        }
+      ],
+      "failingClasses": [
+        {
+          "numberPassing": 1,
+          "numberRunning": 2,
+          "testClass": "org.jboss.test.metadata.web.JBossWeb130UnitTestCase",
+          "numberFailing": 1,
+          "numberErroring": 0,
+          "numberSkipping": 0
+        }
+      ]
+    },
+    "builds": {
+      "fixerBuild": {
+        "url": "http://travis-ci.org/jboss/metadata/builds/431082469",
+        "date": "Sep 20, 2018 5:28:47 PM",
+        "id": 431082469
+      },
+      "buggyBuild": {
+        "url": "http://travis-ci.org/jboss/metadata/builds/431032020",
+        "date": "Sep 20, 2018 3:43:04 PM",
+        "id": 431032020
+      }
+    },
+    "repository": {
+      "name": "jboss-metadata",
+      "url": "https://github.com/jboss/metadata",
+      "isFork": false,
+      "pullRequestId": 0,
+      "isPullRequest": false,
+      "original": {
+        "url": "",
+        "name": "",
+        "githubId": 0
+      },
+      "githubId": 1630952
+    },
+    "commits": {
+      "fixerBuild": {
+        "url": "http://github.com/jboss/metadata/commit/1066064fb0bd3e4e0a2dd54a1c9b9c179d741991",
+        "sha": "1066064fb0bd3e4e0a2dd54a1c9b9c179d741991",
+        "branchName": "master",
+        "date": "Sep 20, 2018 5:24:15 PM",
+        "repoName": "jboss/metadata"
+      },
+      "buggyBuild": {
+        "url": "http://github.com/jboss/metadata/commit/acf5852eabcf44c2604b517ea47bd3f9888f404b",
+        "sha": "acf5852eabcf44c2604b517ea47bd3f9888f404b",
+        "branchName": "master",
+        "date": "Sep 20, 2018 3:35:51 PM",
+        "repoName": "jboss/metadata"
+      }
+    },
+    "branchUrl": "https://github.com/fermadeiral/test-evolve-bears/tree/jboss-metadata-431032020-431082469",
+    "version": "latest",
+    "projectMetrics": {
+      "numberSourceFiles": 668,
+      "numberLibrariesFailingModule": 8,
+      "numberTestFiles": 174,
+      "numberModules": 8
+    },
+    "patchDiff": {
+      "files": {
+        "numberAdded": 0,
+        "numberChanged": 7,
+        "numberDeleted": 0
+      },
+      "lines": {
+        "numberAdded": 0,
+        "numberDeleted": 10
+      }
+    },
+    "bugId": "Bears_1",
+    "diff": "diff --git a/web/src/main/java/org/jboss/metadata/parser/jbossweb/JBossWebMetaDataParser.java b/web/src/main/java/org/jboss/metadata/parser/jbossweb/JBossWebMetaDataParser.java\nindex 55cf09f..1a728e1 100644\n--- a/web/src/main/java/org/jboss/metadata/parser/jbossweb/JBossWebMetaDataParser.java\n+++ b/web/src/main/java/org/jboss/metadata/parser/jbossweb/JBossWebMetaDataParser.java\n@@ -228,6 +228,9 @@ public class JBossWebMetaDataParser extends MetaDataElementParser {\n                     wmd.setMaxActiveSessions(Integer.valueOf(getElementText(reader, propertyReplacer)));\n                     break;\n                 case REPLICATION_CONFIG:\n+                    if (version.compareTo(Version.JBOSS_WEB_13_0) >= 0) {\n+                        throw unexpectedElement(reader);\n+                    }\n                     wmd.setReplicationConfig(ReplicationConfigParser.parse(reader, propertyReplacer));\n                     break;\n                 case DISTINCT_NAME:\ndiff --git a/web/src/main/java/org/jboss/metadata/parser/jbossweb/Location.java b/web/src/main/java/org/jboss/metadata/parser/jbossweb/Location.java\nindex 62814a6..12ccda9 100644\n--- a/web/src/main/java/org/jboss/metadata/parser/jbossweb/Location.java\n+++ b/web/src/main/java/org/jboss/metadata/parser/jbossweb/Location.java\n@@ -43,6 +43,7 @@ public class Location {\n         bindings.put(\"http://www.jboss.org/j2ee/schema/jboss-web_11_0.xsd\", Version.JBOSS_WEB_11_0);\n         bindings.put(\"http://www.jboss.org/j2ee/schema/jboss-web_12_0.xsd\", Version.JBOSS_WEB_12_0);\n         bindings.put(\"http://www.jboss.org/j2ee/schema/jboss-web_12_1.xsd\", Version.JBOSS_WEB_12_1);\n+        bindings.put(\"http://www.jboss.org/j2ee/schema/jboss-web_13_0.xsd\", Version.JBOSS_WEB_13_0);\n     }\n \n     public static Version getVersion(String location) {\ndiff --git a/web/src/main/java/org/jboss/metadata/parser/jbossweb/ReplicationConfigParser.java b/web/src/main/java/org/jboss/metadata/parser/jbossweb/ReplicationConfigParser.java\nindex 2b16e39..411c8f9 100644\n--- a/web/src/main/java/org/jboss/metadata/parser/jbossweb/ReplicationConfigParser.java\n+++ b/web/src/main/java/org/jboss/metadata/parser/jbossweb/ReplicationConfigParser.java\n@@ -38,6 +38,7 @@ import org.jboss.metadata.web.jboss.ReplicationGranularity;\n /**\n  * @author Paul Ferraro\n  */\n+@Deprecated\n public class ReplicationConfigParser extends MetaDataElementParser {\n     private static final Logger log = Logger.getLogger(JBossWebMetaDataParser.class);\n     private static final Set<String> DEPRECATED_ELEMENTS = new HashSet<>(Arrays.asList(\ndiff --git a/web/src/main/java/org/jboss/metadata/parser/jbossweb/Version.java b/web/src/main/java/org/jboss/metadata/parser/jbossweb/Version.java\nindex 8cd02a1..abf8ad1 100644\n--- a/web/src/main/java/org/jboss/metadata/parser/jbossweb/Version.java\n+++ b/web/src/main/java/org/jboss/metadata/parser/jbossweb/Version.java\n@@ -34,4 +34,5 @@ public enum Version {\n     JBOSS_WEB_11_0,\n     JBOSS_WEB_12_0,\n     JBOSS_WEB_12_1,\n+    JBOSS_WEB_13_0,\n }\ndiff --git a/web/src/main/java/org/jboss/metadata/web/jboss/JBossWebMetaData.java b/web/src/main/java/org/jboss/metadata/web/jboss/JBossWebMetaData.java\nindex feadde3..947a69b 100644\n--- a/web/src/main/java/org/jboss/metadata/web/jboss/JBossWebMetaData.java\n+++ b/web/src/main/java/org/jboss/metadata/web/jboss/JBossWebMetaData.java\n@@ -483,10 +483,12 @@ public class JBossWebMetaData extends NamedModuleImpl {\n         this.maxActiveSessions = maxActiveSessions;\r\n     }\r\n \r\n+    @Deprecated\r\n     public ReplicationConfig getReplicationConfig() {\r\n         return replicationConfig;\r\n     }\r\n \r\n+    @Deprecated\r\n     public void setReplicationConfig(ReplicationConfig replicationConfig) {\r\n         this.replicationConfig = replicationConfig;\r\n     }\r\ndiff --git a/web/src/main/java/org/jboss/metadata/web/jboss/ReplicationConfig.java b/web/src/main/java/org/jboss/metadata/web/jboss/ReplicationConfig.java\nindex eaf504b..bb4743b 100644\n--- a/web/src/main/java/org/jboss/metadata/web/jboss/ReplicationConfig.java\n+++ b/web/src/main/java/org/jboss/metadata/web/jboss/ReplicationConfig.java\n@@ -30,6 +30,7 @@ import org.jboss.metadata.javaee.support.IdMetaDataImpl;\n  * @author <a href=\"mailto:bdecoste@jboss.com\">William DeCoste</a>\r\n  * @version <tt>$Revision: 83549 $</tt>\r\n  */\r\n+@Deprecated\r\n public class ReplicationConfig extends IdMetaDataImpl {\r\n     private static final long serialVersionUID = 1;\r\n     protected ReplicationGranularity granularity;\r\ndiff --git a/web/src/main/java/org/jboss/metadata/web/jboss/ReplicationGranularity.java b/web/src/main/java/org/jboss/metadata/web/jboss/ReplicationGranularity.java\nindex 221445f..1e336c7 100644\n--- a/web/src/main/java/org/jboss/metadata/web/jboss/ReplicationGranularity.java\n+++ b/web/src/main/java/org/jboss/metadata/web/jboss/ReplicationGranularity.java\n@@ -21,6 +21,7 @@\n  */\n package org.jboss.metadata.web.jboss;\n \n+@Deprecated\n public enum ReplicationGranularity {\n     SESSION, ATTRIBUTE;\n \n",
+    "type": "passing_passing",
+    "reproductionBuggyBuild": {
+      "machineInfo": {
+        "freeMemory": 343341848,
+        "hostName": "spirals-bears",
+        "totalMemory": 483393536,
+        "numberCPU": 16
+      },
+      "reproductionDateEnd": "Sep 20, 2018 5:32:54 PM",
+      "projectRootPomPath": "./workspace/jboss/metadata/431032020/pom.xml",
+      "processDurations": {
+        "building": {
+          "stepDurations": [
+            0,
+            1,
+            0,
+            0,
+            123
+          ],
+          "stepNames": [
+            "CheckoutPatchedBuildCandidate",
+            "ComputeSourceDir",
+            "ComputeTestDir",
+            "CheckoutBuggyBuildCandidateSourceCode",
+            "BuildProjectBuggyBuildCandidateSourceCode"
+          ],
+          "nbSteps": 5,
+          "totalDuration": 124
+        },
+        "testing": {
+          "stepDurations": [
+            28
+          ],
+          "stepNames": [
+            "TestProjectBuggyBuildCandidateSourceCode"
+          ],
+          "nbSteps": 1,
+          "totalDuration": 28
+        },
+        "cloning": {
+          "stepDurations": [
+            6
+          ],
+          "stepNames": [
+            "CloneRepository"
+          ],
+          "nbSteps": 1,
+          "totalDuration": 6
+        }
+      },
+      "reproductionDateBeginning": "Sep 20, 2018 5:29:08 PM",
+      "totalDuration": 219
+    }
+  }
+]
