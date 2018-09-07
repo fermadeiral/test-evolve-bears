@@ -23,11 +23,7 @@ script:
         echo "A PR is being merged.";
         NEW_BRANCH_NAME="AAA";
         echo "Branch to be created - $NEW_BRANCH_NAME";
-        git clone https://${GH_TOKEN}@github.com/$TRAVIS_REPO_SLUG.git $TRAVIS_REPO_SLUG;
-        cd "$TRAVIS_REPO_SLUG";
-        git checkout "$TRAVIS_BRANCH";
-        git branch "$NEW_BRANCH_NAME";
-        git push -f "$NEW_BRANCH_NAME";
+        git push -q origin "$TRAVIS_BRANCH":"$NEW_BRANCH_NAME";
       fi
     fi
 
