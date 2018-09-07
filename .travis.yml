@@ -23,7 +23,8 @@ script:
         echo "A PR is being merged.";
         NEW_BRANCH_NAME="AAA";
         echo "Branch to be created - $NEW_BRANCH_NAME";
-        git config --global user.email fer.madeiral@gmail.com && git config --global user.name "fermadeiral"
+        git config --global user.name "fermadeiral";
+        git config --global user.email fer.madeiral@gmail.com;
         git push -q origin "$TRAVIS_BRANCH":"$NEW_BRANCH_NAME";
       fi
     fi
