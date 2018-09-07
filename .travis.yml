@@ -25,7 +25,8 @@ script:
         echo "Branch to be created - $NEW_BRANCH_NAME";
         git config --global user.name "fermadeiral";
         git config --global user.email fer.madeiral@gmail.com;
-        git push -q origin "$TRAVIS_BRANCH":"$NEW_BRANCH_NAME";
+        git remote add github https://${GH_TOKEN}@github.com/fermadeiral/test-evolve-bears.git > /dev/null 2>&1
+        git push -q github "$TRAVIS_BRANCH":"$NEW_BRANCH_NAME";
       fi
     fi
 
