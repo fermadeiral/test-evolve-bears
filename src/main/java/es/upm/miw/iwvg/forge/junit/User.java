@@ -47,12 +47,12 @@ public class User {
         return this.familyName;
     }
 
-    public String nameToUpperCase() {
-        return isNotEmpty(this.name) ? this.name.toUpperCase() : null;
+    public void nameToUpperCase() {
+        this.name = isNotEmpty(this.name) ? this.name.toUpperCase() : null;
     }
 
     private boolean isNotEmpty(String s) {
-        return s != null && s.length() > 0;
+        return (s != null) && (s.length() > 0);
     }
 
 }
