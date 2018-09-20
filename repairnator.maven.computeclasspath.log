@@ -1,0 +1,24 @@
+[INFO] Scanning for projects...
+[INFO] Downloading: http://repository.jboss.org/nexus/content/groups/public/org/apache/maven/plugins/maven-release-plugin/2.5.3/maven-release-plugin-2.5.3.pom
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-release-plugin/2.5.3/maven-release-plugin-2.5.3.pom
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-release-plugin/2.5.3/maven-release-plugin-2.5.3.pom (11 KB at 21.0 KB/sec)
+[INFO] Downloading: http://repository.jboss.org/nexus/content/groups/public/org/apache/maven/release/maven-release/2.5.3/maven-release-2.5.3.pom
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/release/maven-release/2.5.3/maven-release-2.5.3.pom
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/release/maven-release/2.5.3/maven-release-2.5.3.pom (5 KB at 136.2 KB/sec)
+[INFO] Downloading: http://repository.jboss.org/nexus/content/groups/public/org/apache/maven/plugins/maven-release-plugin/2.5.3/maven-release-plugin-2.5.3.jar
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-release-plugin/2.5.3/maven-release-plugin-2.5.3.jar
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-release-plugin/2.5.3/maven-release-plugin-2.5.3.jar (52 KB at 821.7 KB/sec)
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building JBoss Metadata Web 12.0.0.Final-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.0.2:build-classpath (default-cli) @ jboss-metadata-web ---
+[INFO] Wrote classpath file '/root/workspace/jboss/metadata/431032020/web/classpath.info'.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.931 s
+[INFO] Finished at: 2018-09-20T17:31:59+02:00
+[INFO] Final Memory: 20M/472M
+[INFO] ------------------------------------------------------------------------
