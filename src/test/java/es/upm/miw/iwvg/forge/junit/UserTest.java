@@ -18,6 +18,8 @@ public class UserTest {
     @Test
     void testFullName() {
         assertEquals("Tomy Gutierrez", this.user.fullName());
+        User u = new User(0, null, null);
+        u.fullName();
     }
 
     @Test
@@ -37,12 +39,18 @@ public class UserTest {
 
     @Test
     void testNameToUpperCase() {
-        assertEquals("TOMY", this.user.nameToUpperCase());
+        User user = new User(1, "Tomy", "Gutierrez");
+        user.nameToUpperCase();
+
+        assertEquals("TOMY", user.getName());
     }
 
     @Test
-    void testNameToUpperCaseIsNull() {
-        assertNull(new User(0, null, null).nameToUpperCase());
+    void testNameToUpperCaseWhenNameIsNull() {
+        User user = new User(0, null, null);
+        user.nameToUpperCase();
+
+        assertNull(user.getName());
     }
 
 }
