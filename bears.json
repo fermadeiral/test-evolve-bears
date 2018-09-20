@@ -1,0 +1,151 @@
+{
+  "tests": {
+    "overallMetrics": {
+      "numberPassing": 386, 
+      "numberRunning": 387, 
+      "numberFailing": 1, 
+      "numberErroring": 0, 
+      "failures": [
+        {
+          "failureName": "java.lang.AssertionError", 
+          "isError": false, 
+          "occurrences": 1
+        }
+      ], 
+      "numberSkipping": 0
+    }, 
+    "failingModule": "/root/workspace/jboss/metadata/431032020/web", 
+    "failingClasses": [
+      {
+        "numberPassing": 1, 
+        "numberRunning": 2, 
+        "testClass": "org.jboss.test.metadata.web.JBossWeb130UnitTestCase", 
+        "numberFailing": 1, 
+        "numberErroring": 0, 
+        "numberSkipping": 0
+      }
+    ], 
+    "failureDetails": [
+      {
+        "failureName": "java.lang.AssertionError", 
+        "testMethod": "testReplicationConfig", 
+        "testClass": "org.jboss.test.metadata.web.JBossWeb130UnitTestCase", 
+        "detail": "<replication-config/> is no longer valid", 
+        "isError": false
+      }
+    ]
+  }, 
+  "builds": {
+    "fixerBuild": {
+      "url": "http://travis-ci.org/jboss/metadata/builds/431082469", 
+      "date": "Sep 20, 2018 5:28:47 PM", 
+      "id": 431082469
+    }, 
+    "buggyBuild": {
+      "url": "http://travis-ci.org/jboss/metadata/builds/431032020", 
+      "date": "Sep 20, 2018 3:43:04 PM", 
+      "id": 431032020
+    }
+  }, 
+  "repository": {
+    "name": "jboss/metadata", 
+    "url": "https://github.com/jboss/metadata", 
+    "isFork": false, 
+    "pullRequestId": 0, 
+    "isPullRequest": false, 
+    "original": {
+      "url": "", 
+      "name": "", 
+      "githubId": 0
+    }, 
+    "githubId": 1630952
+  }, 
+  "commits": {
+    "fixerBuild": {
+      "url": "http://github.com/jboss/metadata/commit/1066064fb0bd3e4e0a2dd54a1c9b9c179d741991", 
+      "sha": "1066064fb0bd3e4e0a2dd54a1c9b9c179d741991", 
+      "branchName": "master", 
+      "date": "Sep 20, 2018 5:24:15 PM", 
+      "repoName": "jboss/metadata"
+    }, 
+    "buggyBuild": {
+      "url": "http://github.com/jboss/metadata/commit/acf5852eabcf44c2604b517ea47bd3f9888f404b", 
+      "sha": "acf5852eabcf44c2604b517ea47bd3f9888f404b", 
+      "branchName": "master", 
+      "date": "Sep 20, 2018 3:35:51 PM", 
+      "repoName": "jboss/metadata"
+    }
+  }, 
+  "version": "latest", 
+  "patchDiff": {
+    "files": {
+      "numberAdded": 0, 
+      "numberChanged": 7, 
+      "numberDeleted": 0
+    }, 
+    "lines": {
+      "numberAdded": 0, 
+      "numberDeleted": 10
+    }
+  }, 
+  "type": "passing_passing", 
+  "bugId": "Bears_2", 
+  "projectMetrics": {
+    "numberSourceFiles": 668, 
+    "numberLibrariesFailingModule": 8, 
+    "numberTestFiles": 174, 
+    "numberModules": 8
+  }, 
+  "reproductionBuggyBuild": {
+    "machineInfo": {
+      "freeMemory": 343341848, 
+      "hostName": "spirals-bears", 
+      "totalMemory": 483393536, 
+      "numberCPU": 16
+    }, 
+    "reproductionDateEnd": "Sep 20, 2018 5:32:54 PM", 
+    "projectRootPomPath": "./workspace/jboss/metadata/431032020/pom.xml", 
+    "processDurations": {
+      "building": {
+        "stepDurations": [
+          0, 
+          1, 
+          0, 
+          0, 
+          123
+        ], 
+        "stepNames": [
+          "CheckoutPatchedBuildCandidate", 
+          "ComputeSourceDir", 
+          "ComputeTestDir", 
+          "CheckoutBuggyBuildCandidateSourceCode", 
+          "BuildProjectBuggyBuildCandidateSourceCode"
+        ], 
+        "nbSteps": 5, 
+        "totalDuration": 124
+      }, 
+      "testing": {
+        "stepDurations": [
+          28
+        ], 
+        "stepNames": [
+          "TestProjectBuggyBuildCandidateSourceCode"
+        ], 
+        "nbSteps": 1, 
+        "totalDuration": 28
+      }, 
+      "cloning": {
+        "stepDurations": [
+          6
+        ], 
+        "stepNames": [
+          "CloneRepository"
+        ], 
+        "nbSteps": 1, 
+        "totalDuration": 6
+      }
+    }, 
+    "reproductionDateBeginning": "Sep 20, 2018 5:29:08 PM", 
+    "totalDuration": 219
+  }
+}
