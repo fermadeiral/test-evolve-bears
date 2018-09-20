@@ -1,0 +1,159 @@
+{
+  "tests": {
+    "overallMetrics": {
+      "numberPassing": 31, 
+      "numberRunning": 33, 
+      "numberFailing": 2, 
+      "numberErroring": 0, 
+      "failures": [
+        {
+          "failureName": "org.opentest4j.AssertionFailedError", 
+          "isError": false, 
+          "occurrences": 2
+        }
+      ], 
+      "numberSkipping": 0
+    }, 
+    "failingModule": "/root/workspace/tomas-teston/IWVG.SwC.TomasTeston/430775801", 
+    "failureDetails": [
+      {
+        "failureName": "org.opentest4j.AssertionFailedError", 
+        "detail": "expected: <null> but was: <>", 
+        "isError": false, 
+        "testClass": "es.upm.miw.iwvg.forge.junit.UserTest", 
+        "testMethod": "testNameToUpperCaseWhenNameIsNull"
+      }, 
+      {
+        "failureName": "org.opentest4j.AssertionFailedError", 
+        "detail": "expected: <TOMY> but was: <Tomy>", 
+        "isError": false, 
+        "testClass": "es.upm.miw.iwvg.forge.junit.UserTest", 
+        "testMethod": "testNameToUpperCase"
+      }
+    ], 
+    "failingClasses": [
+      {
+        "numberPassing": 4, 
+        "numberRunning": 6, 
+        "testClass": "es.upm.miw.iwvg.forge.junit.UserTest", 
+        "numberFailing": 2, 
+        "numberErroring": 0, 
+        "numberSkipping": 0
+      }
+    ]
+  }, 
+  "builds": {
+    "fixerBuild": {
+      "url": "http://travis-ci.org/tomas-teston/IWVG.SwC.TomasTeston/builds/430893967", 
+      "date": "Sep 20, 2018 9:16:51 AM", 
+      "id": 430893967
+    }, 
+    "buggyBuild": {
+      "url": "http://travis-ci.org/tomas-teston/IWVG.SwC.TomasTeston/builds/430775801", 
+      "date": "Sep 20, 2018 12:27:07 AM", 
+      "id": 430775801
+    }
+  }, 
+  "repository": {
+    "name": "tomas-teston/IWVG.SwC.TomasTeston", 
+    "url": "https://github.com/tomas-teston/IWVG.SwC.TomasTeston", 
+    "isFork": false, 
+    "pullRequestId": 0, 
+    "isPullRequest": false, 
+    "original": {
+      "url": "", 
+      "name": "", 
+      "githubId": 0
+    }, 
+    "githubId": 148892273
+  }, 
+  "commits": {
+    "fixerBuild": {
+      "url": "http://github.com/tomas-teston/IWVG.SwC.TomasTeston/commit/2773de673e473db5859de442288b0b8625bb8caa", 
+      "sha": "2773de673e473db5859de442288b0b8625bb8caa", 
+      "branchName": "develop", 
+      "date": "Sep 20, 2018 9:14:49 AM", 
+      "repoName": "tomas-teston/IWVG.SwC.TomasTeston"
+    }, 
+    "buggyBuild": {
+      "url": "http://github.com/tomas-teston/IWVG.SwC.TomasTeston/commit/54e486f15dedba8c0b684183acc6b4c8d269ed03", 
+      "sha": "54e486f15dedba8c0b684183acc6b4c8d269ed03", 
+      "branchName": "develop", 
+      "date": "Sep 20, 2018 12:21:33 AM", 
+      "repoName": "tomas-teston/IWVG.SwC.TomasTeston"
+    }
+  }, 
+  "version": "latest", 
+  "patchDiff": {
+    "files": {
+      "numberAdded": 0, 
+      "numberChanged": 1, 
+      "numberDeleted": 0
+    }, 
+    "lines": {
+      "numberAdded": 3, 
+      "numberDeleted": 3
+    }
+  }, 
+  "type": "passing_passing", 
+  "bugId": "Bears_3", 
+  "projectMetrics": {
+    "numberSourceFiles": 5, 
+    "numberLibrariesFailingModule": 8, 
+    "numberTestFiles": 5, 
+    "numberLines": 0, 
+    "numberModules": 1
+  }, 
+  "reproductionBuggyBuild": {
+    "machineInfo": {
+      "freeMemory": 293063088, 
+      "hostName": "spirals-bears", 
+      "totalMemory": 392691712, 
+      "numberCPU": 16
+    }, 
+    "reproductionDateEnd": "Sep 20, 2018 9:18:16 AM", 
+    "projectRootPomPath": "./workspace/tomas-teston/IWVG.SwC.TomasTeston/430775801/pom.xml", 
+    "processDurations": {
+      "building": {
+        "stepDurations": [
+          0, 
+          0, 
+          0, 
+          0, 
+          20
+        ], 
+        "stepNames": [
+          "CheckoutPatchedBuildCandidate", 
+          "ComputeSourceDir", 
+          "ComputeTestDir", 
+          "CheckoutBuggyBuildCandidateSourceCode", 
+          "BuildProjectBuggyBuildCandidateSourceCode"
+        ], 
+        "nbSteps": 5, 
+        "totalDuration": 20
+      }, 
+      "testing": {
+        "stepDurations": [
+          11
+        ], 
+        "stepNames": [
+          "TestProjectBuggyBuildCandidateSourceCode"
+        ], 
+        "nbSteps": 1, 
+        "totalDuration": 11
+      }, 
+      "cloning": {
+        "stepDurations": [
+          1
+        ], 
+        "stepNames": [
+          "CloneRepository"
+        ], 
+        "nbSteps": 1, 
+        "totalDuration": 1
+      }
+    }, 
+    "reproductionDateBeginning": "Sep 20, 2018 9:17:10 AM", 
+    "totalDuration": 62
+  }
+}
