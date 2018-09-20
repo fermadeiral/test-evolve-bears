@@ -1,0 +1,15 @@
+language: java
+jdk:
+- oraclejdk8
+branches:
+  only:
+  - master
+  - develop
+notifications:
+  email:
+    recipients:
+    - tomini18@hotmail.com
+script:
+- mvn verify
+- mvn org.jacoco:jacoco-maven-plugin:prepare-agent verify
+- mvn sonar:sonar -Dsonar.organization=tomas-teston-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR
