@@ -26,7 +26,6 @@ script:
         git config --global user.name "fermadeiral";
         git config --global user.email fer.madeiral@gmail.com;
         git remote add github https://${GH_TOKEN}@github.com/fermadeiral/test-evolve-bears.git > /dev/null 2>&1;
-        git push -q github "$TRAVIS_BRANCH":"$NEW_BRANCH_NAME";
         git checkout --orphan "$NEW_BRANCH_NAME"; git reset .; git clean -fd;
         bugCommitId=`git log --format=format:%H --grep="Bug commit"`;
         testCommitId=`git log --format=format:%H --grep="Changes in the tests"`;
