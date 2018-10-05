@@ -10,6 +10,11 @@ env:
     - DOCKER_TAG=fermadeiral/test-evolve-bears:latest
     - secure: "Qrqjw8L8Mu71b1/Lwtlmyf4EyzG1mGdDKmjAlXy29+JHSdhAskF1iIOaFH2SFHuSxJaGM+k9LNRJYdYAzUqxEH0q4Nmk5YvyKiYUl+5HNX2f+C855hGkE/mMKr0PmEncectpY5t7cYRUR0esbvx7AZyvQHSUDu4cPSzrLPGz2nz6K/040C7NGlma4ck9wsILLHvgSJ5HiZB97yLaVKJUave4Kt6hFag5zaHvEPqISs4b2w/cKVsi35JjIgseYITMUuXoVKMR9EDX1J59NLNV3NG3iPN8+tpZzICpY4j3qY7NitfS5o04sD/hZml938R/0cTgVnNP0jlVE1YfhN95p9F3m187r7zUtqLLN4Tf05nrDbCCZi4g6FKRPnLV3g8zU9lKN3I97kOA3Z+0MCy3R7p5sIUEvthypXK5bcFf8FaCLQKWIFex5//Js3Xg5YPnThSUt2SOXly5DbQ0ctElD52V2xTbbqXMohD08uTqmOdTsVQMOyOXNcK9CqX6AtpafNJ2BQzLy+bbO0Npd/OLkT/4PTrAT33ls0/5ptKSeFsaYjOi/uckGjRSOuAxax1PVZLSJut9iGuWtf8t08nkUZw5vAdFu9RF2f/7YcfKogCAVuWLe2tme35aNjMH1licBQi/MuioM+rT/dhRE1wf7lEKWDGPz7BIfO73npbrJJM="
 
+install:
+  - add-apt-repository ppa:eugenesan/ppa
+  - apt-get update
+  - apt-get install jq -y
+
 script:
   - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
       echo "It is a PR.";
@@ -21,12 +26,13 @@ script:
       COMMIT_MESSAGE_PATTERN="Merge pull request";
       if [[ "$TRAVIS_COMMIT_MESSAGE" == "$COMMIT_MESSAGE_PATTERN"* ]]; then
         echo "A PR is being merged.";
-        NEW_BRANCH_NAME="AAA";
-        echo "Branch to be created - $NEW_BRANCH_NAME";
         git config --global user.name "fermadeiral";
         git config --global user.email fer.madeiral@gmail.com;
         git remote add github https://${GH_TOKEN}@github.com/fermadeiral/test-evolve-bears.git > /dev/null 2>&1;
         git checkout pr-add-bug;
+        buggyBuildId="$(jq '.builds.buggyBuild.id')";
+        NEW_BRANCH_NAME="$buggyBuildId";
+        echo "Branch to be created - $NEW_BRANCH_NAME";
         bugCommitId="$(git log --format=format:%H --grep="Bug commit")";
         testCommitId="$(git log --format=format:%H --grep="Changes in the tests")";
         patchCommitId="$(git log --format=format:%H --grep="Human patch")";
