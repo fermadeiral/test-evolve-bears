@@ -27,10 +27,10 @@ script:
         git config --global user.email fer.madeiral@gmail.com;
         git remote add github https://${GH_TOKEN}@github.com/fermadeiral/test-evolve-bears.git > /dev/null 2>&1;
         git checkout pr-add-bug;
-        bugCommitId=`git log --format=format:%H --grep="Bug commit"`;
-        testCommitId=`git log --format=format:%H --grep="Changes in the tests"`;
-        patchCommitId=`git log --format=format:%H --grep="Human patch"`;
-        endCommitId=`git log --format=format:%H --grep="End of the bug and patch reproduction process"`;
+        bugCommitId="$(git log --format=format:%H --grep="Bug commit")";
+        testCommitId="$(git log --format=format:%H --grep="Changes in the tests")";
+        patchCommitId="$(git log --format=format:%H --grep="Human patch")";
+        endCommitId="$(git log --format=format:%H --grep="End of the bug and patch reproduction process")";
         git checkout --orphan "$NEW_BRANCH_NAME"; git reset .; git clean -fd;
         git cherry-pick bugCommitId;
         git cherry-pick testCommitId;
