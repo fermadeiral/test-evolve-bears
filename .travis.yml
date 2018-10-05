@@ -32,10 +32,10 @@ script:
         patchCommitId="$(git log --format=format:%H --grep="Human patch")";
         endCommitId="$(git log --format=format:%H --grep="End of the bug and patch reproduction process")";
         git checkout --orphan "$NEW_BRANCH_NAME"; git reset .; git clean -fd;
-        git cherry-pick bugCommitId;
-        git cherry-pick testCommitId;
-        git cherry-pick patchCommitId;
-        git cherry-pick endCommitId;
+        git cherry-pick "$bugCommitId";
+        git cherry-pick "$testCommitId";
+        git cherry-pick "$patchCommitId";
+        git cherry-pick "$endCommitId";
         git push github "$NEW_BRANCH_NAME":"$NEW_BRANCH_NAME";
       fi
     fi
