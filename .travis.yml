@@ -29,8 +29,11 @@ script:
         git config --global user.email fer.madeiral@gmail.com;
         git remote add github https://${GH_TOKEN}@github.com/fermadeiral/test-evolve-bears.git > /dev/null 2>&1;
         git checkout pr-add-bug;
+        repoName="$(jq '.repository.name' bears.json)";
+        repoName="$(echo $repoName | sed -e 's/\//-/g')";
         buggyBuildId="$(jq '.builds.buggyBuild.id' bears.json)";
-        NEW_BRANCH_NAME="$buggyBuildId";
+        fixerBuildId="$(jq '.builds.fixerBuild.id' bears.json)";
+        NEW_BRANCH_NAME="$repoName-$buggyBuildId-$fixerBuildId";
         echo "Branch to be created - $NEW_BRANCH_NAME";
         bugCommitId="$(git log --format=format:%H --grep="Bug commit")";
         testCommitId="$(git log --format=format:%H --grep="Changes in the tests")";
