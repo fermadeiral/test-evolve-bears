@@ -30,7 +30,7 @@ script:
         git remote add github https://${GH_TOKEN}@github.com/fermadeiral/test-evolve-bears.git > /dev/null 2>&1;
         git checkout pr-add-bug;
         repoName="$(jq '.repository.name' bears.json)";
-        repoName="$(echo $repoName | sed -e 's/\//-/g')";
+        repoName=$(echo $repoName | sed -e 's/\//-/g');
         buggyBuildId="$(jq '.builds.buggyBuild.id' bears.json)";
         fixerBuildId="$(jq '.builds.fixerBuild.id' bears.json)";
         NEW_BRANCH_NAME="$repoName-$buggyBuildId-$fixerBuildId";
