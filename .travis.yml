@@ -14,44 +14,54 @@ install:
   - sudo apt-get update
   - sudo apt-get install jq -y
 
-script:
-  - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
-      echo "It is a PR.";
-      docker pull "$DOCKER_TAG";
-      docker run --name "$TRAVIS_PULL_REQUEST_BRANCH" --mount type=bind,source="$(pwd)",target=/var/app/pr --env BRANCH_NAME="$TRAVIS_PULL_REQUEST_BRANCH" "$DOCKER_TAG";
-      exit $(docker inspect "$TRAVIS_PULL_REQUEST_BRANCH" --format='{{.State.ExitCode}}');
-    else
-      echo "Travis commit message - $TRAVIS_COMMIT_MESSAGE";
-      COMMIT_MESSAGE_PATTERN="Merge pull request";
-      if [[ "$TRAVIS_COMMIT_MESSAGE" == "$COMMIT_MESSAGE_PATTERN"* ]]; then
-        echo "A PR is being merged.";
-        git config --global user.name "fermadeiral";
-        git config --global user.email fer.madeiral@gmail.com;
-        git remote add github https://${GH_TOKEN}@github.com/fermadeiral/test-evolve-bears.git > /dev/null 2>&1;
-        git checkout pr-add-bug;
-        repoName=$(jq '.repository.name' bears.json);
-        repoName=$(echo "$repoName" | sed -e 's/\"//g');
-        repoName=$(echo "$repoName" | sed -e 's/\//-/g');
-        buggyBuildId=$(jq '.builds.buggyBuild.id' bears.json);
-        fixerBuildId=$(jq '.builds.fixerBuild.id' bears.json);
-        NEW_BRANCH_NAME=$repoName-$buggyBuildId-$fixerBuildId;
-        echo "Branch to be created - $NEW_BRANCH_NAME";
-        bugCommitId=$(git log --format=format:%H --grep="Bug commit");
-        testCommitId=$(git log --format=format:%H --grep="Changes in the tests");
-        patchCommitId=$(git log --format=format:%H --grep="Human patch");
-        endCommitId=$(git log --format=format:%H --grep="End of the bug and patch reproduction process");
-        git checkout --orphan "$NEW_BRANCH_NAME"; git reset .; git clean -fd;
-        git cherry-pick "$bugCommitId";
-        git cherry-pick "$testCommitId";
-        git cherry-pick "$patchCommitId";
-        git cherry-pick "$endCommitId";
-        git push github "$NEW_BRANCH_NAME":"$NEW_BRANCH_NAME";
-        git checkout pr-add-bug;
-        parentsOfMergingCommit=$(git log --pretty=%P -n 1);
-        lastCommitBeforeMerging=${parentsOfMergingCommit%' '*};
-        git reset --hard "$lastCommitBeforeMerging"; git push -f github pr-add-bug;
-      fi
-    fi
+jobs:
+  include:
+    - stage: Validation
+      name: "Validating..."
+      script:
+        - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+            echo "It is a PR.";
+            docker pull "$DOCKER_TAG";
+            docker run --name "$TRAVIS_PULL_REQUEST_BRANCH" --mount type=bind,source="$(pwd)",target=/var/app/pr --env BRANCH_NAME="$TRAVIS_PULL_REQUEST_BRANCH" "$DOCKER_TAG";
+            exit $(docker inspect "$TRAVIS_PULL_REQUEST_BRANCH" --format='{{.State.ExitCode}}');
+          fi
+    - stage: Merge
+      name: "Merge PR..."
+      script:
+        - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+            echo "It is a PR.";
+          else
+            echo "Travis commit message - $TRAVIS_COMMIT_MESSAGE";
+            COMMIT_MESSAGE_PATTERN="Merge pull request";
+            if [[ "$TRAVIS_COMMIT_MESSAGE" == "$COMMIT_MESSAGE_PATTERN"* ]]; then
+              echo "A PR is being merged.";
+              git config --global user.name "fermadeiral";
+              git config --global user.email fer.madeiral@gmail.com;
+              git remote add github https://${GH_TOKEN}@github.com/fermadeiral/test-evolve-bears.git > /dev/null 2>&1;
+              git checkout pr-add-bug;
+              repoName=$(jq '.repository.name' bears.json);
+              repoName=$(echo "$repoName" | sed -e 's/\"//g');
+              repoName=$(echo "$repoName" | sed -e 's/\//-/g');
+              buggyBuildId=$(jq '.builds.buggyBuild.id' bears.json);
+              fixerBuildId=$(jq '.builds.fixerBuild.id' bears.json);
+              NEW_BRANCH_NAME=$repoName-$buggyBuildId-$fixerBuildId;
+              echo "Branch to be created - $NEW_BRANCH_NAME";
+              bugCommitId=$(git log --format=format:%H --grep="Bug commit");
+              testCommitId=$(git log --format=format:%H --grep="Changes in the tests");
+              patchCommitId=$(git log --format=format:%H --grep="Human patch");
+              endCommitId=$(git log --format=format:%H --grep="End of the bug and patch reproduction process");
+              git checkout --orphan "$NEW_BRANCH_NAME"; git reset .; git clean -fd;
+              git cherry-pick "$bugCommitId";
+              git cherry-pick "$testCommitId";
+              git cherry-pick "$patchCommitId";
+              git cherry-pick "$endCommitId";
+              git push github "$NEW_BRANCH_NAME":"$NEW_BRANCH_NAME";
+              git checkout pr-add-bug;
+              parentsOfMergingCommit=$(git log --pretty=%P -n 1);
+              lastCommitBeforeMerging=${parentsOfMergingCommit%' '*};
+              git reset --hard "$lastCommitBeforeMerging"; git push -f github pr-add-bug;
+            fi
+          fi
 
 after_success:
   - echo "Everything is ok."
