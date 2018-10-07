@@ -24,11 +24,11 @@ jobs:
       script:
         - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
             echo "It is a PR.";
-            ./check_pr/check_bears_json_file.sh "$TRAVIS_PULL_REQUEST_BRANCH"
+            ./check_pr/check_bears_json_file.sh "$TRAVIS_PULL_REQUEST_BRANCH";
           fi
         - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
             echo "It is a PR.";
-            ./check_pr/check_commits.sh "$TRAVIS_PULL_REQUEST_BRANCH"
+            ./check_pr/check_commits.sh "$TRAVIS_PULL_REQUEST_BRANCH";
           fi
         - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
             echo "It is a PR.";
