@@ -25,6 +25,7 @@ jobs:
         - ./check_pr/check_bears_json_file.sh "$TRAVIS_PULL_REQUEST_BRANCH"
         - ./check_pr/check_commits.sh "$TRAVIS_PULL_REQUEST_BRANCH"
     - stage: Validation - run maven on buggy and patch commits
+      if: "$TRAVIS_PULL_REQUEST" != "false"
       script:
         - docker pull "$DOCKER_TAG";
           docker run --name "$TRAVIS_PULL_REQUEST_BRANCH" --mount type=bind,source="$(pwd)",target=/var/app/pr --env BRANCH_NAME="$TRAVIS_PULL_REQUEST_BRANCH" --env IS_BUGGY_COMMIT=1 "$DOCKER_TAG";
@@ -33,8 +34,8 @@ jobs:
           docker run --name "$TRAVIS_PULL_REQUEST_BRANCH" --mount type=bind,source="$(pwd)",target=/var/app/pr --env BRANCH_NAME="$TRAVIS_PULL_REQUEST_BRANCH" --env IS_BUGGY_COMMIT=0 "$DOCKER_TAG";
           exit $(docker inspect "$TRAVIS_PULL_REQUEST_BRANCH" --format='{{.State.ExitCode}}');
     - stage: Merge
-      script:
       if: "$TRAVIS_PULL_REQUEST" = "false"
+      script:
         - echo "Travis commit message - $TRAVIS_COMMIT_MESSAGE";
           COMMIT_MESSAGE_PATTERN="Merge pull request";
           if [[ "$TRAVIS_COMMIT_MESSAGE" == "$COMMIT_MESSAGE_PATTERN"* ]]; then
