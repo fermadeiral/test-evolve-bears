@@ -13,12 +13,24 @@ env:
 install:
   - sudo apt-get update
   - sudo apt-get install jq -y
+  - sudo apt-get install curl -y
+  - sudo curl -sL https://deb.nodesource.com/setup_8.x | bash -
+  - sudo apt-get install nodejs
+  - sudo npm install -g ajv-cli
 
 jobs:
   include:
     - stage: Validation
-      name: "Validating..."
+      name: "Validating PR..."
       script:
+        - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+            echo "It is a PR.";
+            ./check_pr/check_bears_json_file.sh "$TRAVIS_PULL_REQUEST_BRANCH"
+          fi
+        - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+            echo "It is a PR.";
+            ./check_pr/check_commits.sh "$TRAVIS_PULL_REQUEST_BRANCH"
+          fi
         - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
             echo "It is a PR.";
             docker pull "$DOCKER_TAG";
