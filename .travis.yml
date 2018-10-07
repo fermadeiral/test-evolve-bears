@@ -19,21 +19,32 @@ install:
 
 jobs:
   include:
-    - stage: Validation
-      name: "Validating PR..."
+    - stage: Validation - json file and commits
+      name: "Validating PR - json file and commits..."
       script:
         - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
             echo "It is a PR.";
             ./check_pr/check_bears_json_file.sh "$TRAVIS_PULL_REQUEST_BRANCH";
           fi
+      script:
         - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
             echo "It is a PR.";
             ./check_pr/check_commits.sh "$TRAVIS_PULL_REQUEST_BRANCH";
           fi
+    - stage: Validation - run maven on buggy and patch commits
+      name: "Validating PR - run maven on buggy and patch commits..."
+      script:
         - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
             echo "It is a PR.";
             docker pull "$DOCKER_TAG";
-            docker run --name "$TRAVIS_PULL_REQUEST_BRANCH" --mount type=bind,source="$(pwd)",target=/var/app/pr --env BRANCH_NAME="$TRAVIS_PULL_REQUEST_BRANCH" "$DOCKER_TAG";
+            docker run --name "$TRAVIS_PULL_REQUEST_BRANCH" --mount type=bind,source="$(pwd)",target=/var/app/pr --env BRANCH_NAME="$TRAVIS_PULL_REQUEST_BRANCH" --env IS_BUGGY_COMMIT=1 "$DOCKER_TAG";
+            exit $(docker inspect "$TRAVIS_PULL_REQUEST_BRANCH" --format='{{.State.ExitCode}}');
+          fi
+      script:
+        - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+            echo "It is a PR.";
+            docker pull "$DOCKER_TAG";
+            docker run --name "$TRAVIS_PULL_REQUEST_BRANCH" --mount type=bind,source="$(pwd)",target=/var/app/pr --env BRANCH_NAME="$TRAVIS_PULL_REQUEST_BRANCH" --env IS_BUGGY_COMMIT=0 "$DOCKER_TAG";
             exit $(docker inspect "$TRAVIS_PULL_REQUEST_BRANCH" --format='{{.State.ExitCode}}');
           fi
     - stage: Merge

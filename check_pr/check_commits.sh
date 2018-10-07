@@ -42,8 +42,6 @@ if [ "$numberOfCommits" -lt 4 ] ; then
     exit 1
 fi
 
-git log
-
 bugCommitId=""
 
 case=$(cat bears.json | sed 's/.*"type": "\(.*\)".*/\1/;t;d')

@@ -11,6 +11,7 @@ RUN echo "Europe/Paris" > /etc/timezone && chmod +x /var/app/*.sh
 ENV M2_HOME=$MAVEN_HOME
 
 ENV BRANCH_NAME=
+ENV IS_BUGGY_COMMIT=
 
 WORKDIR /var/app/
-ENTRYPOINT /var/app/check_branch.sh $BRANCH_NAME
+ENTRYPOINT /var/app/check_branch.sh $BRANCH_NAME $IS_BUGGY_COMMIT
