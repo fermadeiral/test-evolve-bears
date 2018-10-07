@@ -23,6 +23,9 @@ jobs:
       if: type = pull_request
       script:
         - ./check_pr/check_bears_json_file.sh "$TRAVIS_PULL_REQUEST_BRANCH"
+    - stage: Validation - json file and commits
+      if: type = pull_request
+      script:
         - ./check_pr/check_commits.sh "$TRAVIS_PULL_REQUEST_BRANCH"
     - stage: Validation - run maven on buggy and patch commits
       if: type = pull_request
