@@ -27,13 +27,13 @@ jobs:
       if: type = pull_request
       script:
         - ./check_pr/check_commits.sh "$TRAVIS_PULL_REQUEST_BRANCH"
-    - stage: Validation - run maven on buggy and patch commits
+    - stage: Validation - run maven on buggy and patched commits
       if: type = pull_request
       script:
         - docker pull "$DOCKER_TAG";
           docker run --name "$TRAVIS_PULL_REQUEST_BRANCH" --mount type=bind,source="$(pwd)",target=/var/app/pr --env BRANCH_NAME="$TRAVIS_PULL_REQUEST_BRANCH" --env IS_BUGGY_COMMIT=1 "$DOCKER_TAG";
           exit $(docker inspect "$TRAVIS_PULL_REQUEST_BRANCH" --format='{{.State.ExitCode}}');
-    - stage: Validation - run maven on buggy and patch commits
+    - stage: Validation - run maven on buggy and patched commits
       if: type = pull_request
       script:
         - docker pull "$DOCKER_TAG";

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-if [ "$#" -ne 1 ]; then
-    echo "Usage: ./check_branches.sh <branch name>"
+if [ "$#" -ne 2 ]; then
+    echo "Usage: ./check_branches.sh <branch name> <1 for buggy commit, 0 for patched commit>"
     exit 2
 fi
 
