@@ -16,6 +16,17 @@ function checkCommit {
     fi
 }
 
+function checkParent {
+    echo "$1"
+    if [ "$1" != "$2" ]; then
+        RESULT="$BRANCH_NAME [FAILURE] (the commits are not in the right sequence)"
+        >&2 echo -e "$RED $RESULT $NC"
+        exit 1
+    else
+        echo "The commit is OK."
+    fi
+}
+
 BRANCH_NAME=$1
 
 RED='\033[0;31m'
@@ -86,6 +97,12 @@ if [ "$case" == "failing_passing" ]; then
     checkCommit "$patchCommitId"
     checkCommit "$endCommitId"
 
+    parentEndCommit=`git log --pretty=%P -n 1 "$endCommitId"`
+    parentPatchCommit=`git log --pretty=%P -n 1 "$patchCommitId"`
+
+    checkParent "$parentEndCommit" "$patchCommitId"
+    checkParent "$parentPatchCommit" "$bugCommitId"
+
     bugCommitId=`git log --format=format:%H --grep="Bug commit"`
 else
     echo "4 commits must exist."
@@ -101,6 +118,14 @@ else
     checkCommit "$testCommitId"
     checkCommit "$patchCommitId"
     checkCommit "$endCommitId"
+
+    parentEndCommit=`git log --pretty=%P -n 1 "$endCommitId"`
+    parentPatchCommit=`git log --pretty=%P -n 1 "$testCommitId"`
+    parentTestCommit=`git log --pretty=%P -n 1 "$patchCommitId"`
+
+    checkParent "$parentEndCommit" "$patchCommitId"
+    checkParent "$parentPatchCommit" "$testCommitId"
+    checkParent "$parentTestCommit" "$bugCommitId"
 
     bugCommitId=`git log --format=format:%H --grep="Changes in the tests"`
 fi
