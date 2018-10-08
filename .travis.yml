@@ -51,8 +51,10 @@ jobs:
         - sudo apt-get update
         - sudo apt-get install jq -y
       before_script:
-        - git config --global user.name "fermadeiral";
-          git config --global user.email fer.madeiral@gmail.com;
+        - COMMITTER_USERNAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")"
+          COMMITTER_EMAIL="$(git log -1 $TRAVIS_COMMIT --pretty="%cE")"
+          git config --global user.name "$COMMITTER_USERNAME";
+          git config --global user.email "$COMMITTER_EMAIL";
           git remote add github https://${GH_TOKEN}@github.com/"$TRAVIS_REPO_SLUG".git > /dev/null 2>&1;
       script:
         - echo "Travis commit message - $TRAVIS_COMMIT_MESSAGE";
