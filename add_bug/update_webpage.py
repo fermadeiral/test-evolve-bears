@@ -3,23 +3,18 @@ import os
 import subprocess
 import json
 
-REPO_NAME = "test-evolve-bears-fer"
-
-print "Enter in script"
+REPO_NAME = "test-evolve-bears"
 
 branch = sys.argv[1]
-print "Branch received: %s" % branch
 
 cmd = "git checkout %s;" % branch
 subprocess.call(cmd, shell=True)
 
 cmd = "git rev-parse HEAD~2;"
 buggy_commit = subprocess.check_output(cmd, shell=True).replace("\n", "")
-print buggy_commit
 
 cmd = "git rev-parse HEAD~1;"
 fixed_commit = subprocess.check_output(cmd, shell=True).replace("\n", "")
-print fixed_commit
 
 cmd = "git diff %s %s -- '*.java';" % (buggy_commit, fixed_commit)
 human_patch = subprocess.check_output(cmd, shell=True)
