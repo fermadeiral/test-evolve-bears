@@ -73,6 +73,7 @@ jobs:
             parentsOfMergingCommit=$(git log --pretty=%P -n 1);
             lastCommitBeforeMerging=${parentsOfMergingCommit%' '*};
             git reset --hard "$lastCommitBeforeMerging"; git push -f github pr-add-bug;
+            python update_webpage.py "$NEW_BRANCH_NAME"
           fi
 
 after_success:
