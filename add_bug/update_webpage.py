@@ -5,8 +5,10 @@ import json
 
 REPO_NAME = "test-evolve-bears-fer"
 
+print "Enter in script"
+
 branch = sys.argv[1]
-print "Branch: %s" % branch
+print "Branch received: %s" % branch
 
 cmd = "git checkout %s;" % branch
 subprocess.call(cmd, shell=True)
@@ -28,7 +30,7 @@ with open('bears.json') as original_json_file:
     bug['branchUrl'] = "https://github.com/fermadeiral/" + REPO_NAME + "/tree/" + branch
     bug['diff'] = human_patch
 
-cmd = "git checkout master;"
+cmd = "git checkout -qf master;"
 subprocess.call(cmd, shell=True)
 
 with open(os.path.join("docs", "data", "bears-bugs.json")) as fd:
