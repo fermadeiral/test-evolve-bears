@@ -33,10 +33,21 @@ with open('bears.json') as original_json_file:
 cmd = "git checkout -qf master;"
 subprocess.call(cmd, shell=True)
 
-with open(os.path.join("docs", "data", "bears-bugs.json")) as fd:
-    bugs = json.load(fd)
+bugs = None
+if os.path.exists(os.path.join("docs", "data", "bears-bugs.json")):
+    with open(os.path.join("docs", "data", "bears-bugs.json"),'r') as f:
+        try:
+            bugs = json.load(f)
+            print('loaded that: ',bugs)
+        except Exception as e:
+            print("got %s on json.load()" % e)
 
-bugs.append(bug)
+if bugs is None:
+    print('each time I am creating the new one')
+    bugs = bug
+else:
+    bugs.append(bug)
+
 with open(os.path.join("docs", "data", "bears-bugs.json"), mode='w') as fd:
     fd.write(json.dumps(bugs, indent=2))
 
