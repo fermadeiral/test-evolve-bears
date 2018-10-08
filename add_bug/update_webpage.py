@@ -3,7 +3,7 @@ import os
 import subprocess
 import json
 
-REPO_NAME = "test-evolve-bears"
+REPO_NAME = "$TRAVIS_REPO_SLUG"
 
 branch = sys.argv[1]
 

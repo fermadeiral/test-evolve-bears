@@ -19,10 +19,13 @@ jobs:
         - sudo npm install -g ajv-cli
       script:
         - ./check_pr/check_bears_json_file.sh "$TRAVIS_PULL_REQUEST_BRANCH"
+
     - stage: Validation - json file and commits
       if: type = pull_request
       script:
         - ./check_pr/check_commits.sh "$TRAVIS_PULL_REQUEST_BRANCH"
+
+
     - stage: Validation - run maven on buggy and patched commits
       if: type = pull_request
       services:
@@ -31,6 +34,7 @@ jobs:
         - docker pull "$DOCKER_TAG";
           docker run --name "$TRAVIS_PULL_REQUEST_BRANCH" --mount type=bind,source="$(pwd)",target=/var/app/pr --env BRANCH_NAME="$TRAVIS_PULL_REQUEST_BRANCH" --env IS_BUGGY_COMMIT=1 "$DOCKER_TAG";
           exit $(docker inspect "$TRAVIS_PULL_REQUEST_BRANCH" --format='{{.State.ExitCode}}');
+
     - stage: Validation - run maven on buggy and patched commits
       if: type = pull_request
       services:
@@ -39,6 +43,8 @@ jobs:
         - docker pull "$DOCKER_TAG";
           docker run --name "$TRAVIS_PULL_REQUEST_BRANCH" --mount type=bind,source="$(pwd)",target=/var/app/pr --env BRANCH_NAME="$TRAVIS_PULL_REQUEST_BRANCH" --env IS_BUGGY_COMMIT=0 "$DOCKER_TAG";
           exit $(docker inspect "$TRAVIS_PULL_REQUEST_BRANCH" --format='{{.State.ExitCode}}');
+
+
     - stage: Merge
       if: type = push
       install:
@@ -47,7 +53,7 @@ jobs:
       before_script:
         - git config --global user.name "fermadeiral";
           git config --global user.email fer.madeiral@gmail.com;
-          git remote add github https://${GH_TOKEN}@github.com/fermadeiral/test-evolve-bears.git > /dev/null 2>&1;
+          git remote add github https://${GH_TOKEN}@github.com/"$TRAVIS_REPO_SLUG".git > /dev/null 2>&1;
       script:
         - echo "Travis commit message - $TRAVIS_COMMIT_MESSAGE";
           COMMIT_MESSAGE_PATTERN="Merge pull request";
