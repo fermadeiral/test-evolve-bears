@@ -38,18 +38,14 @@ if os.path.exists(os.path.join("docs", "data", "bears-bugs.json")):
     with open(os.path.join("docs", "data", "bears-bugs.json"),'r') as f:
         try:
             bugs = json.load(f)
-            print('loaded that: ',bugs)
         except Exception as e:
             print("got %s on json.load()" % e)
 
-if bugs is None:
-    print('each time I am creating the new one')
-    bugs = bug
-else:
+if bugs is not None:
     bugs.append(bug)
 
-with open(os.path.join("docs", "data", "bears-bugs.json"), mode='w') as fd:
-    fd.write(json.dumps(bugs, indent=2))
+    with open(os.path.join("docs", "data", "bears-bugs.json"), mode='w') as fd:
+        fd.write(json.dumps(bugs, indent=2))
 
-cmd = "git add -A; git commit -m %s; git push github;" % branch
-subprocess.call(cmd, shell=True)
+    cmd = "git add -A; git commit -m %s; git push github;" % branch
+    subprocess.call(cmd, shell=True)
