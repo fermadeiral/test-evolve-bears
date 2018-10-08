@@ -51,7 +51,8 @@ jobs:
         - sudo apt-get update
         - sudo apt-get install jq -y
       before_script:
-        - COMMITTER_USERNAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")";
+        - echo "COM - $TRAVIS_COMMIT";
+          COMMITTER_USERNAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")";
           COMMITTER_EMAIL="$(git log -1 $TRAVIS_COMMIT --pretty="%cE")";
           git config --global user.name "$COMMITTER_USERNAME";
           git config --global user.email "$COMMITTER_EMAIL";
