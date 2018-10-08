@@ -51,7 +51,8 @@ jobs:
         - sudo apt-get update
         - sudo apt-get install jq -y
       before_script:
-        - COMMITTER_USERNAME=$(git log -1 --pretty="%cN");
+        - git checkout pr-add-bug;
+          COMMITTER_USERNAME=$(git log -1 --pretty="%cN");
           COMMITTER_EMAIL=$(git log -1 --pretty="%cE");
           echo "$COMMITTER_USERNAME";
           echo "$COMMITTER_EMAIL";
