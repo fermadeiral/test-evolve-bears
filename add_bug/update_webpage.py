@@ -42,5 +42,5 @@ if bugs is not None:
     with open(os.path.join("docs", "data", "bears-bugs.json"), mode='w') as fd:
         fd.write(json.dumps(bugs, indent=2))
 
-    cmd = "git add -A; git commit -m %s; git push github;" % branch
+    cmd = "git add -A; git commit -m Update webpage with %s; git push github;" % branch
     subprocess.call(cmd, shell=True)
