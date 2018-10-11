@@ -102,7 +102,7 @@ jobs:
           COMMIT_MESSAGE_PATTERN="Merge pull request";
           if [[ "$TRAVIS_COMMIT_MESSAGE" == "$COMMIT_MESSAGE_PATTERN"* ]]; then
             echo "A PR is being merged.";
-            git checkout -- .;
+            git stash;
             git checkout pr-add-bug;
             parentsOfMergingCommit=$(git log --pretty=%P -n 1);
             lastCommitBeforeMerging=${parentsOfMergingCommit%' '*};
