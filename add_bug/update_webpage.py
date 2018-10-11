@@ -39,7 +39,7 @@ if os.path.exists(os.path.join("docs", "data", "bears-bugs.json")):
 if bugs is not None:
     bugs.append(bug)
 
-    with open(os.path.join("docs", "data", "bears-bugs.json"), mode='w') as fd:
+    with open(os.path.join("docs", "data", "bears-bugs.json"), 'w') as fd:
         fd.write(json.dumps(bugs, indent=2))
 
     cmd = "git add -A; git commit -m Update webpage with %s; git push github;" % branch
