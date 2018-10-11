@@ -5,9 +5,6 @@ import json
 
 branch = sys.argv[1]
 
-cmd = "git checkout -qf master;"
-subprocess.call(cmd, shell=True)
-
 with open(os.path.join("releases", "latest-branches.txt"), mode='a') as file:
     file.write(branch)
 
@@ -30,5 +27,7 @@ if versions is not None:
     with open(os.path.join("releases", "branches-per-version.json"),'w') as f:
         f.write(json.dumps(versions, indent=2))
 
-    cmd = "git add -A; git commit -m %s; git push github;" % ("Add" + branch)
+    commit_message = "Add %s" % branch
+
+    cmd = "git add -A; git commit -m %s; git push github;" % commit_message
     subprocess.call(cmd, shell=True)
