@@ -35,6 +35,8 @@ if [ "$IS_BUGGY_COMMIT" -eq 1 ]; then
 
     git checkout -q $bugCommitId
 
+    mvn install -V -DskipTests=true -B  $MAVEN_TEST_ARGS
+
     timeout 1800s mvn -B test $MAVEN_TEST_ARGS
 
     status=$?
@@ -54,6 +56,8 @@ else
     git log --format=%B -n 1 $patchCommitId
 
     git checkout -q $patchCommitId
+
+    mvn install -V -DskipTests=true -B  $MAVEN_TEST_ARGS
 
     timeout 1800s mvn -B test $MAVEN_TEST_ARGS
 
