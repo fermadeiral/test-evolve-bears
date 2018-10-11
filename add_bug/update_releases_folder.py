@@ -5,6 +5,9 @@ import json
 
 branch = sys.argv[1]
 
+cmd = "git checkout -qf master;"
+subprocess.call(cmd, shell=True)
+
 with open(os.path.join("releases", "latest-branches.txt"), mode='a') as file:
     file.write(branch + "\n")
 
