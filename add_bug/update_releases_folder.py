@@ -6,7 +6,7 @@ import json
 branch = sys.argv[1]
 
 with open(os.path.join("releases", "latest-branches.txt"), mode='a') as file:
-    file.write(branch)
+    file.write(branch + "\n")
 
 
 
