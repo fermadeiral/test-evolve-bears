@@ -3,9 +3,8 @@ import os
 import subprocess
 import json
 
-REPO_NAME = "$TRAVIS_REPO_SLUG"
-
 branch = sys.argv[1]
+REPO_NAME = sys.argv[2]
 
 cmd = "git checkout %s;" % branch
 subprocess.call(cmd, shell=True)
