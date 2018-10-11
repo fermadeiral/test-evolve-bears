@@ -6,6 +6,8 @@ import json
 branch = sys.argv[1]
 REPO_NAME = sys.argv[2]
 
+all_bears_bugs_json_file = os.path.join("docs", "data", "bears-bugs.json")
+
 cmd = "git checkout %s;" % branch
 subprocess.call(cmd, shell=True)
 
@@ -28,8 +30,8 @@ cmd = "git checkout -qf master;"
 subprocess.call(cmd, shell=True)
 
 bugs = None
-if os.path.exists(os.path.join("docs", "data", "bears-bugs.json")):
-    with open(os.path.join("docs", "data", "bears-bugs.json"),'r') as f:
+if os.path.exists(all_bears_bugs_json_file):
+    with open(all_bears_bugs_json_file,'r') as f:
         try:
             bugs = json.load(f)
         except Exception as e:
@@ -38,7 +40,7 @@ if os.path.exists(os.path.join("docs", "data", "bears-bugs.json")):
 if bugs is not None:
     bugs.append(bug)
 
-    with open(os.path.join("docs", "data", "bears-bugs.json"), 'w') as fd:
+    with open(all_bears_bugs_json_file, 'w') as fd:
         fd.write(json.dumps(bugs, indent=2))
 
     cmd = "git add -A; git commit -m '(Automatic commit) Add %s'; git push github;" % branch

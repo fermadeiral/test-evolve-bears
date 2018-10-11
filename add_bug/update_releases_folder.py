@@ -5,17 +5,22 @@ import json
 
 branch = sys.argv[1]
 
+txt_file_path = os.path.join("releases", "latest_branches.txt")
+json_file_path = os.path.join("releases", "branches_per_version.json")
+
+# check out master
 cmd = "git checkout -qf master;"
 subprocess.call(cmd, shell=True)
 
-with open(os.path.join("releases", "latest_branches.txt"), mode='a') as file:
+
+# update the txt file containing the list of latest branches
+with open(txt_file_path, mode='a') as file:
     file.write(branch + "\n")
 
-
-
+# update the json file containing all branches per version
 versions = None
-if os.path.exists(os.path.join("releases", "branches_per_version.json")):
-    with open(os.path.join("releases", "branches_per_version.json"),'r') as f:
+if os.path.exists(json_file_path):
+    with open(json_file_path,'r') as f:
         try:
             versions = json.load(f)
         except Exception as e:
@@ -24,7 +29,7 @@ if os.path.exists(os.path.join("releases", "branches_per_version.json")):
 if versions is not None:
     versions["latest"].append(branch)
 
-    with open(os.path.join("releases", "branches_per_version.json"),'w') as f:
+    with open(json_file_path,'w') as f:
         f.write(json.dumps(versions, indent=2))
 
     cmd = "git add -A; git commit --amend --no-edit; git push -f github;"

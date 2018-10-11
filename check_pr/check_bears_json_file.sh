@@ -11,7 +11,7 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
-command -v ajv >/dev/null 2>&1 || { echo >&2 "I require ajv (https://github.com/jessedc/ajv-cli) but it's not installed.  Aborting."; exit 1; }
+command -v ajv >/dev/null 2>&1 || { echo >&2 "I require ajv (https://github.com/jessedc/ajv-cli) but it's not installed. Aborting."; exit 2; }
 
 SCRIPT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 JSON_SCHEMA="$SCRIPT_DIR/bears-schema.json"
