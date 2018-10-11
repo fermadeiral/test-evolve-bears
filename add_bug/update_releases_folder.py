@@ -22,8 +22,6 @@ if os.path.exists(os.path.join("releases", "branches-per-version.json")):
             print("got %s on json.load()" % e)
 
 if versions is not None:
-    print (versions)
-
     versions["latest"].extend(str(branch))
 
     with open(os.path.join("releases", "branches-per-version.json"),'w') as f:
