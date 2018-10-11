@@ -24,7 +24,7 @@ if os.path.exists(os.path.join("releases", "branches-per-version.json")):
 if versions is not None:
     print (versions)
 
-    versions["latest"].extend(branch)
+    versions["latest"].extend(str(branch))
 
     with open(os.path.join("releases", "branches-per-version.json"),'w') as f:
         f.write(json.dumps(versions, indent=2))
