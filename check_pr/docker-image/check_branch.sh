@@ -35,7 +35,7 @@ if [ "$IS_BUGGY_COMMIT" -eq 1 ]; then
 
     git checkout -q $bugCommitId
 
-    timeout 1800s mvn -q -B test -Dsurefire.printSummary=false $MAVEN_TEST_ARGS
+    timeout 1800s mvn -B test $MAVEN_TEST_ARGS
 
     status=$?
     if [ "$status" -eq 124 ]; then
@@ -55,7 +55,7 @@ else
 
     git checkout -q $patchCommitId
 
-    timeout 1800s mvn -q -B test -Dsurefire.printSummary=false $MAVEN_TEST_ARGS
+    timeout 1800s mvn -B test $MAVEN_TEST_ARGS
 
     status=$?
     if [ "$status" -eq 124 ]; then
