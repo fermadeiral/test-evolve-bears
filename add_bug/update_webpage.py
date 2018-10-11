@@ -21,7 +21,7 @@ human_patch = subprocess.check_output(cmd, shell=True)
 with open('bears.json') as original_json_file:
     bug = json.load(original_json_file)
     bug['repository']['name'] = bug['repository']['name'].replace("/","-")
-    bug['branchUrl'] = "https://github.com/fermadeiral/" + REPO_NAME + "/tree/" + branch
+    bug['branchUrl'] = "https://github.com/" + REPO_NAME + "/tree/" + branch
     bug['diff'] = human_patch
 
 cmd = "git checkout -qf master;"

@@ -14,4 +14,4 @@ ENV BRANCH_NAME=
 ENV IS_BUGGY_COMMIT=
 
 WORKDIR /var/app/
-ENTRYPOINT /var/app/check_branch.sh $BRANCH_NAME $IS_BUGGY_COMMIT
+ENTRYPOINT /var/app/check_with_maven.sh $BRANCH_NAME $IS_BUGGY_COMMIT
