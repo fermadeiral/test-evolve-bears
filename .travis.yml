@@ -93,7 +93,7 @@ jobs:
             git checkout pr-add-bug;
             git config --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/*;
             git fetch;
-            python add_bug/update_releases.py "$NEW_BRANCH_NAME";
+            python add_bug/update_releases_folder.py "$NEW_BRANCH_NAME";
             python add_bug/update_webpage.py "$NEW_BRANCH_NAME";
           fi
       after_script:
