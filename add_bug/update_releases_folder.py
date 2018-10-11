@@ -27,7 +27,5 @@ if versions is not None:
     with open(os.path.join("releases", "branches-per-version.json"),'w') as f:
         f.write(json.dumps(versions, indent=2))
 
-    commit_message = "Add %s" % branch
-
-    cmd = "git add -A; git commit -m %s; git push github;" % commit_message
+    cmd = "git add -A; git commit --amend --no-edit; git push -f github;"
     subprocess.call(cmd, shell=True)
