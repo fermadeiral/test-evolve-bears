@@ -26,7 +26,7 @@ jobs:
         - ./check_pr/check_commits.sh "$TRAVIS_PULL_REQUEST_BRANCH"
 
 
-    - stage: Validation - run maven on buggy and patched commits
+    - stage: Validation - run maven on buggy and patched commits (first trial)
       if: type = pull_request
       services:
         - docker
@@ -35,7 +35,25 @@ jobs:
           docker run --name "$TRAVIS_PULL_REQUEST_BRANCH" --mount type=bind,source="$(pwd)",target=/var/app/pr --env BRANCH_NAME="$TRAVIS_PULL_REQUEST_BRANCH" --env IS_BUGGY_COMMIT=1 "$DOCKER_TAG";
           exit $(docker inspect "$TRAVIS_PULL_REQUEST_BRANCH" --format='{{.State.ExitCode}}');
 
-    - stage: Validation - run maven on buggy and patched commits
+    - stage: Validation - run maven on buggy and patched commits (first trial)
+      if: type = pull_request
+      services:
+        - docker
+      script:
+        - docker pull "$DOCKER_TAG";
+          docker run --name "$TRAVIS_PULL_REQUEST_BRANCH" --mount type=bind,source="$(pwd)",target=/var/app/pr --env BRANCH_NAME="$TRAVIS_PULL_REQUEST_BRANCH" --env IS_BUGGY_COMMIT=0 "$DOCKER_TAG";
+          exit $(docker inspect "$TRAVIS_PULL_REQUEST_BRANCH" --format='{{.State.ExitCode}}');
+
+    - stage: Validation - run maven on buggy and patched commits (second trial)
+      if: type = pull_request
+      services:
+        - docker
+      script:
+        - docker pull "$DOCKER_TAG";
+          docker run --name "$TRAVIS_PULL_REQUEST_BRANCH" --mount type=bind,source="$(pwd)",target=/var/app/pr --env BRANCH_NAME="$TRAVIS_PULL_REQUEST_BRANCH" --env IS_BUGGY_COMMIT=1 "$DOCKER_TAG";
+          exit $(docker inspect "$TRAVIS_PULL_REQUEST_BRANCH" --format='{{.State.ExitCode}}');
+
+    - stage: Validation - run maven on buggy and patched commits (second trial)
       if: type = pull_request
       services:
         - docker
@@ -53,9 +71,10 @@ jobs:
       before_script:
         - git checkout pr-add-bug;
           COMMITTER_USERNAME=$(git log -n 1 --skip 1 --pretty="%cn");
+          echo $(git log -n 1 --skip 1);
           COMMITTER_EMAIL=$(git log -n 1 --skip 1 --pretty="%ce");
-          echo "$COMMITTER_USERNAME";
-          echo "$COMMITTER_EMAIL";
+          echo "Author username - $COMMITTER_USERNAME";
+          echo "Author email - $COMMITTER_EMAIL";
           git config --global user.name "$COMMITTER_USERNAME";
           git config user.name;
           git config --global user.email "$COMMITTER_EMAIL";
