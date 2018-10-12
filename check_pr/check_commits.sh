@@ -4,7 +4,7 @@ function checkCommit {
     echo "$1"
     if [ -z "$1" ]; then
         RESULT="$BRANCH_NAME [FAILURE] (some commit is missing)"
-        >&2 echo -e "$RED $RESULT $NC"
+        >&2 echo -e "$RED $RESULT"
         exit 1
     else
         echo "The commit is OK."
@@ -15,7 +15,7 @@ function checkParent {
     echo "$1"
     if [ "$1" != "$2" ]; then
         RESULT="$BRANCH_NAME [FAILURE] (the commits are not in the right sequence)"
-        >&2 echo -e "$RED $RESULT $NC"
+        >&2 echo -e "$RED $RESULT"
         exit 1
     else
         echo "The commit is OK."
@@ -26,7 +26,6 @@ BRANCH_NAME=$1
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
-NC='\033[0m' # No Color
 
 SCRIPT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 
@@ -76,4 +75,4 @@ else
 fi
 
 RESULT="$BRANCH_NAME [OK]"
-echo -e "$GREEN $RESULT $NC"
+echo -e "$GREEN $RESULT"
