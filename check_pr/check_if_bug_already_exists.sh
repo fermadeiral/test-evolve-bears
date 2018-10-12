@@ -9,9 +9,7 @@ GREEN='\033[0;32m'
 
 git checkout -qf master
 
-FOUND=$(cat ./releases/branches_per_version.json | grep "$BRANCH_NAME")
-
-if [ ! -z "$FOUND" ]; then
+if grep -q "$BRANCH_NAME" ./releases/branches_per_version.json; then
     RESULT="> $BRANCH_NAME [FAILURE] (the bug already exists in Bears)"
     echo -e "$RED$RESULT"
     exit 1
