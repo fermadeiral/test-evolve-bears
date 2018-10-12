@@ -11,6 +11,7 @@ env:
 
 before_script:
   - chmod +x ./check_pr/*.sh
+    chmod +x ./add_bug/*.sh
 
 jobs:
   include:
@@ -60,13 +61,10 @@ jobs:
         - if [[ "$TRAVIS_COMMIT_MESSAGE" == "$MERGE_PR_COMMIT_MESSAGE_PATTERN"* ]]; then
             git checkout pr-add-bug;
             COMMITTER_USERNAME=$(git log -n 1 --skip 1 --pretty="%cn");
-            echo $(git log -n 1 --skip 1);
             COMMITTER_EMAIL=$(git log -n 1 --skip 1 --pretty="%ce");
-            echo "Author username - $COMMITTER_USERNAME";
-            echo "Author email - $COMMITTER_EMAIL";
             git config --global user.name "$COMMITTER_USERNAME";
-            git config user.name;
             git config --global user.email "$COMMITTER_EMAIL";
+            git config user.name;
             git config user.email;
             git remote add github https://${GH_TOKEN}@github.com/"$TRAVIS_REPO_SLUG".git > /dev/null 2>&1;
 
@@ -92,10 +90,6 @@ jobs:
             ./add_bug/reset_pr-add-bug_branch.sh;
           fi
 
-after_success:
-  - echo "Everything is ok."
-
 branches:
   - only:
     - pr-add-bug
-
