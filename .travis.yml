@@ -37,8 +37,7 @@ jobs:
         - sudo apt-get update
         - sudo apt-get install jq -y
       script:
-        - chmod +x ./check_pr/check_if_bug_already_exists.sh
-          ./check_pr/check_if_bug_already_exists.sh "$NEW_BRANCH_NAME"
+        - ./check_pr/check_if_bug_already_exists.sh "$NEW_BRANCH_NAME";
 
     - stage: Validation - run maven on buggy and patched commits
       if: type = pull_request
