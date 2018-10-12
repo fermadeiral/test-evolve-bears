@@ -103,6 +103,7 @@ jobs:
             git cherry-pick "$patchCommitId";
             git cherry-pick "$endCommitId";
             git push github "$NEW_BRANCH_NAME":"$NEW_BRANCH_NAME";
+            git checkout pr-add-bug;
             python add_bug/update_bears_json_file.py "$NEW_BRANCH_NAME";
           fi
       after_success:
