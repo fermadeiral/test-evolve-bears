@@ -12,7 +12,7 @@ git checkout -qf master
 
 repoName=$(echo "$branches_per_version_file_path" | grep "$BRANCH_NAME");
 
-echo "$repoName"
+echo -e "$repoName"
 
 #if [ "$i" == "$BRANCH_NAME" ]; then
 #    RESULT="> $BRANCH_NAME [FAILURE] (the bug already exists in Bears)"

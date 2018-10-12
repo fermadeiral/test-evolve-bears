@@ -30,15 +30,6 @@ NC='\033[0m' # No Color
 
 SCRIPT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 
-numberOfCommits=`git rev-list --count HEAD`
-if [ "$numberOfCommits" -lt 4 ] ; then
-    RESULT="$BRANCH_NAME [FAILURE] (the number of commits is less than 4)"
-    >&2 echo -e "$RED $RESULT $NC"
-    exit 1
-fi
-
-bugCommitId=""
-
 case=$(cat bears.json | sed 's/.*"type": "\(.*\)".*/\1/;t;d')
 echo "Branch from $case case."
 
@@ -60,8 +51,6 @@ if [ "$case" == "failing_passing" ]; then
 
     checkParent "$parentEndCommit" "$patchCommitId"
     checkParent "$parentPatchCommit" "$bugCommitId"
-
-    bugCommitId=`git log --format=format:%H --grep="Bug commit"`
 else
     echo "> 4 commits must exist."
 
@@ -84,8 +73,6 @@ else
     checkParent "$parentEndCommit" "$patchCommitId"
     checkParent "$parentPatchCommit" "$testCommitId"
     checkParent "$parentTestCommit" "$bugCommitId"
-
-    bugCommitId=`git log --format=format:%H --grep="Changes in the tests"`
 fi
 
 RESULT="$BRANCH_NAME [OK]"
