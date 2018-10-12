@@ -18,7 +18,7 @@ jobs:
         - sudo apt-get install -y nodejs
         - sudo npm install -g ajv-cli
       script:
-        - ./check_pr/check_bears_json_file.sh "$TRAVIS_PULL_REQUEST_BRANCH"
+        - ./check_pr/check_bears_json_file.sh "$TRAVIS_PULL_REQUEST_BRANCH";
           repoName=$(jq '.repository.name' bears.json);
           repoName=$(echo "$repoName" | sed -e 's/\"//g');
           repoName=$(echo "$repoName" | sed -e 's/\//-/g');
@@ -29,7 +29,7 @@ jobs:
     - stage: Validation - json file and commits
       if: type = pull_request
       script:
-        - ./check_pr/check_commits.sh "$TRAVIS_PULL_REQUEST_BRANCH"
+        - ./check_pr/check_commits.sh "$TRAVIS_PULL_REQUEST_BRANCH";
 
     - stage: Validation - check whether Bears already contains the proposed bug
       if: type = pull_request
