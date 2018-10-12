@@ -10,7 +10,7 @@ branches_per_version_file_path="./releases/branches_per_version.json"
 
 git checkout -qf master
 
-repoName=$(echo "$branches_per_version_file_path" | grep "$BRANCH_NAME");
+repoName=$(cat "$branches_per_version_file_path" | grep "$BRANCH_NAME");
 
 echo -e "$repoName"
 
