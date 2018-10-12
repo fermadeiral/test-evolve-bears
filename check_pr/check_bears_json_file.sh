@@ -7,8 +7,6 @@ BRANCH_NAME="$TRAVIS_PULL_REQUEST_BRANCH"
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 
-command -v ajv >/dev/null 2>&1 || { echo >&2 "I require ajv (https://github.com/jessedc/ajv-cli) but it's not installed. Aborting."; exit 2; }
-
 SCRIPT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 JSON_SCHEMA="$SCRIPT_DIR/bears-schema.json"
 if [ ! -f $JSON_SCHEMA ]; then
@@ -23,14 +21,14 @@ if [ -e "bears.json" ]; then
         echo "> bears.json is valid in $BRANCH_NAME"
     else
         RESULT="$BRANCH_NAME [FAILURE] (bears.json is invalid)"
-        >&2 echo -e "$RED $RESULT"
+        echo -e "$RED$RESULT"
         exit 1
     fi
 else
     RESULT="$BRANCH_NAME [FAILURE] (bears.json does not exist)"
-    >&2 echo -e "$RED $RESULT"
+    echo -e "$RED$RESULT"
     exit 1
 fi
 
 RESULT="$BRANCH_NAME [OK]"
-echo -e "$GREEN $RESULT"
+echo -e "$GREEN$RESULT"

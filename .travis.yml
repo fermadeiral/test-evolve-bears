@@ -26,7 +26,7 @@ jobs:
     - stage: Validation - json file and commits
       if: type = pull_request
       script:
-        - ./check_pr/check_commits.sh "$TRAVIS_PULL_REQUEST_BRANCH";
+        - ./check_pr/check_commits.sh;
 
     - stage: Validation - check non-existence of the bug in Bears
       if: type = pull_request

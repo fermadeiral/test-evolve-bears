@@ -13,9 +13,9 @@ FOUND=$(cat "$branches_per_version_file_path" | grep "$BRANCH_NAME");
 
 if [ ! -z "$FOUND" ]; then
     RESULT="> $BRANCH_NAME [FAILURE] (the bug already exists in Bears)"
-    echo -e "$RED""$RESULT"
+    echo -e "$RED$RESULT"
     exit 1
 fi
 
 RESULT="> $BRANCH_NAME [OK]"
-echo -e "$GREEN""$RESULT"
+echo -e "$GREEN$RESULT"

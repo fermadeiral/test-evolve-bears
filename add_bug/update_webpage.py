@@ -40,8 +40,8 @@ if os.path.exists(all_bears_bugs_json_file):
 if bugs is not None:
     bugs.append(bug)
 
-    with open(all_bears_bugs_json_file, 'w') as fd:
-        fd.write(json.dumps(bugs, indent=2))
+    with open(all_bears_bugs_json_file, 'w') as f:
+        f.write(json.dumps(bugs, indent=2))
 
     cmd = "git add -A; git commit -m '(Automatic commit) Add %s'; git push github;" % branch
     subprocess.call(cmd, shell=True)
