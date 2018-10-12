@@ -10,9 +10,7 @@ subprocess.call(cmd, shell=True)
 with open('bears.json', 'r') as f:
     data = json.load(f)
 
-entry = {'version': 'latest'}
-
-data.append(entry)
+data['version'] = "latest"
 
 with open('bears.json', 'w') as f:
     f.write(json.dumps(data, indent=2))
