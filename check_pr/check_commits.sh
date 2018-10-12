@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-if [ "$#" -ne 1 ]; then
-    echo "Usage: ./check_commits.sh <branch name>"
-    exit 2
-fi
-
 function checkCommit {
     echo "$1"
     if [ -z "$1" ]; then
@@ -45,11 +40,12 @@ fi
 bugCommitId=""
 
 case=$(cat bears.json | sed 's/.*"type": "\(.*\)".*/\1/;t;d')
-echo "Branch from case $case"
-if [ "$case" == "failing_passing" ]; then
-    echo "3 commits must exist."
+echo "Branch from $case case."
 
-    echo "Checking commits..."
+if [ "$case" == "failing_passing" ]; then
+    echo "> 3 commits must exist."
+
+    echo "> Checking commits..."
 
     bugCommitId=`git log --format=format:%H --grep="Bug commit"`
     patchCommitId=`git log --format=format:%H --grep="Human patch"`
@@ -67,9 +63,9 @@ if [ "$case" == "failing_passing" ]; then
 
     bugCommitId=`git log --format=format:%H --grep="Bug commit"`
 else
-    echo "4 commits must exist."
+    echo "> 4 commits must exist."
 
-    echo "Checking commits..."
+    echo "> Checking commits..."
 
     bugCommitId=`git log --format=format:%H --grep="Bug commit"`
     testCommitId=`git log --format=format:%H --grep="Changes in the tests"`
