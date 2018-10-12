@@ -12,11 +12,6 @@ jobs:
   include:
     - stage: Validation - json file and commits
       if: type = pull_request
-      script:
-        - ./check_pr/check_commits.sh "$TRAVIS_PULL_REQUEST_BRANCH"
-
-    - stage: Validation - json file and commits
-      if: type = pull_request
       install:
         - sudo apt-get update
         - curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
@@ -31,16 +26,19 @@ jobs:
           fixerBuildId=$(jq '.builds.fixerBuild.id' bears.json);
           NEW_BRANCH_NAME=$repoName-$buggyBuildId-$fixerBuildId;
 
-    - stage: Validation - check whether Bears already contains the proposed bug
-      if: type = pull_request
-      script:
-        - ./check_pr/check_if_bug_already_exists.sh "$NEW_BRANCH_NAME"
-
     - stage: Validation - json file and commits
       if: type = pull_request
       script:
         - ./check_pr/check_commits.sh "$TRAVIS_PULL_REQUEST_BRANCH"
 
+    - stage: Validation - check whether Bears already contains the proposed bug
+      if: type = pull_request
+      install:
+        - sudo apt-get update
+        - sudo apt-get install jq -y
+      script:
+        - chmod +x ./check_pr/check_if_bug_already_exists.sh
+          ./check_pr/check_if_bug_already_exists.sh "$NEW_BRANCH_NAME"
 
     - stage: Validation - run maven on buggy and patched commits
       if: type = pull_request
