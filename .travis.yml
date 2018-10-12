@@ -22,12 +22,6 @@ jobs:
         - sudo npm install -g ajv-cli
       script:
         - ./check_pr/check_bears_json_file.sh "$TRAVIS_PULL_REQUEST_BRANCH";
-          repoName=$(jq '.repository.name' bears.json);
-          repoName=$(echo "$repoName" | sed -e 's/\"//g');
-          repoName=$(echo "$repoName" | sed -e 's/\//-/g');
-          buggyBuildId=$(jq '.builds.buggyBuild.id' bears.json);
-          fixerBuildId=$(jq '.builds.fixerBuild.id' bears.json);
-          NEW_BRANCH_NAME=$repoName-$buggyBuildId-$fixerBuildId;
 
     - stage: Validation - json file and commits
       if: type = pull_request
@@ -40,7 +34,13 @@ jobs:
         - sudo apt-get update
         - sudo apt-get install jq -y
       script:
-        - ./check_pr/check_if_bug_already_exists.sh "$NEW_BRANCH_NAME";
+        - repoName=$(jq '.repository.name' bears.json);
+          repoName=$(echo "$repoName" | sed -e 's/\"//g');
+          repoName=$(echo "$repoName" | sed -e 's/\//-/g');
+          buggyBuildId=$(jq '.builds.buggyBuild.id' bears.json);
+          fixerBuildId=$(jq '.builds.fixerBuild.id' bears.json);
+          NEW_BRANCH_NAME=$repoName-$buggyBuildId-$fixerBuildId;
+          ./check_pr/check_if_bug_already_exists.sh "$NEW_BRANCH_NAME";
 
     - stage: Validation - run maven on buggy and patched commits
       if: type = pull_request
@@ -83,6 +83,12 @@ jobs:
           if [[ "$TRAVIS_COMMIT_MESSAGE" == "$COMMIT_MESSAGE_PATTERN"* ]]; then
             echo "A PR is being merged.";
             git checkout pr-add-bug;
+            repoName=$(jq '.repository.name' bears.json);
+            repoName=$(echo "$repoName" | sed -e 's/\"//g');
+            repoName=$(echo "$repoName" | sed -e 's/\//-/g');
+            buggyBuildId=$(jq '.builds.buggyBuild.id' bears.json);
+            fixerBuildId=$(jq '.builds.fixerBuild.id' bears.json);
+            NEW_BRANCH_NAME=$repoName-$buggyBuildId-$fixerBuildId;
             echo "Branch to be created - $NEW_BRANCH_NAME";
             bugCommitId=$(git log --format=format:%H --grep="Bug commit");
             testCommitId=$(git log --format=format:%H --grep="Changes in the tests");
