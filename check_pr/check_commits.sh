@@ -69,7 +69,7 @@ else
 
     echo "Buggy commit: $bugCommitId"
     checkCommit "$bugCommitId"
-    echo "Changes in the tests commit: $endCommitId"
+    echo "Changes in the tests commit: $testCommitId"
     checkCommit "$testCommitId"
     echo "Patched commit: $patchCommitId"
     checkCommit "$patchCommitId"
