@@ -12,11 +12,6 @@ json_file_path = os.path.join("releases", "branches_per_version.json")
 cmd = "git checkout -qf master;"
 subprocess.call(cmd, shell=True)
 
-
-# update the txt file containing the list of latest branches
-with open(txt_file_path, mode='a') as file:
-    file.write(branch + "\n")
-
 # update the json file containing all branches per version
 versions = None
 if os.path.exists(json_file_path):
