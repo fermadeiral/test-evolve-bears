@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-if [ "$#" -ne 1 ]; then
-    echo "Usage: ./check_bears_json_file.sh <branch name>"
-    exit 2
-fi
-
 BRANCH_NAME=$1
 
 RED='\033[0;31m'

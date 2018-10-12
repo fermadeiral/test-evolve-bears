@@ -4,8 +4,8 @@ sudo: true
 
 env:
   global:
-    - DOCKER_TAG=fermadeiral/test-evolve-bears:latest
     - secure: "Qrqjw8L8Mu71b1/Lwtlmyf4EyzG1mGdDKmjAlXy29+JHSdhAskF1iIOaFH2SFHuSxJaGM+k9LNRJYdYAzUqxEH0q4Nmk5YvyKiYUl+5HNX2f+C855hGkE/mMKr0PmEncectpY5t7cYRUR0esbvx7AZyvQHSUDu4cPSzrLPGz2nz6K/040C7NGlma4ck9wsILLHvgSJ5HiZB97yLaVKJUave4Kt6hFag5zaHvEPqISs4b2w/cKVsi35JjIgseYITMUuXoVKMR9EDX1J59NLNV3NG3iPN8+tpZzICpY4j3qY7NitfS5o04sD/hZml938R/0cTgVnNP0jlVE1YfhN95p9F3m187r7zUtqLLN4Tf05nrDbCCZi4g6FKRPnLV3g8zU9lKN3I97kOA3Z+0MCy3R7p5sIUEvthypXK5bcFf8FaCLQKWIFex5//Js3Xg5YPnThSUt2SOXly5DbQ0ctElD52V2xTbbqXMohD08uTqmOdTsVQMOyOXNcK9CqX6AtpafNJ2BQzLy+bbO0Npd/OLkT/4PTrAT33ls0/5ptKSeFsaYjOi/uckGjRSOuAxax1PVZLSJut9iGuWtf8t08nkUZw5vAdFu9RF2f/7YcfKogCAVuWLe2tme35aNjMH1licBQi/MuioM+rT/dhRE1wf7lEKWDGPz7BIfO73npbrJJM="
+    - DOCKER_TAG=fermadeiral/test-evolve-bears:latest
     - NEW_BRANCH_NAME=""
 
 before_script:
@@ -34,7 +34,7 @@ jobs:
       script:
         - ./check_pr/check_commits.sh "$TRAVIS_PULL_REQUEST_BRANCH";
 
-    - stage: Validation - check whether Bears already contains the proposed bug
+    - stage: Validation - check non-existence of the bug in Bears
       if: type = pull_request
       install:
         - sudo apt-get update
