@@ -9,7 +9,7 @@ env:
     - MERGE_PR_COMMIT_MESSAGE_PATTERN="Merge pull request";
     - NEW_BRANCH_NAME=""
 
-before_script:
+before_install:
   - find ./.travis_bears/ -type f -iname "*.sh" -exec chmod +x {} \;
 
 jobs:
@@ -50,8 +50,7 @@ jobs:
     - stage: Merge
       if: type = push
       install:
-        - find ./.travis_bears/ -type f -iname "*.sh" -exec chmod +x {} \;
-          ./.travis_bears/install/install_jq.sh
+        - ./.travis_bears/install/install_jq.sh
       before_script:
         - if [[ "$TRAVIS_COMMIT_MESSAGE" == "$MERGE_PR_COMMIT_MESSAGE_PATTERN"* ]]; then
             git checkout pr-add-bug;
