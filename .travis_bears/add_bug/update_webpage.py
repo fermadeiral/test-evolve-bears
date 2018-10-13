@@ -45,3 +45,6 @@ if bugs is not None:
 
     cmd = "git add -A; git commit -m '(Automatic commit) Add %s'; git push github;" % branch
     subprocess.call(cmd, shell=True)
+
+cmd = "git checkout pr-add-bug;"
+subprocess.call(cmd, shell=True)

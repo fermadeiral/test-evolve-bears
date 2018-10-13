@@ -28,3 +28,6 @@ if versions is not None:
 
     cmd = "git add -A; git commit --amend --no-edit; git push -f github;"
     subprocess.call(cmd, shell=True)
+
+cmd = "git checkout pr-add-bug;"
+subprocess.call(cmd, shell=True)
