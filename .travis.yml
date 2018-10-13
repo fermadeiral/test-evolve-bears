@@ -10,7 +10,7 @@ env:
     - NEW_BRANCH_NAME=""
 
 before_script:
-  - find /.travis_bears/ -type f -iname "*.sh" -exec chmod +x {} \;
+  - find ./.travis_bears/ -type f -iname "*.sh" -exec chmod +x {} \;
 
 jobs:
   include:
@@ -50,7 +50,7 @@ jobs:
     - stage: Merge
       if: type = push
       install:
-        - find /.travis_bears/ -type f -iname "*.sh" -exec chmod +x {} \;
+        - find ./.travis_bears/ -type f -iname "*.sh" -exec chmod +x {} \;
           ./.travis_bears/install/install_jq.sh
       before_script:
         - if [[ "$TRAVIS_COMMIT_MESSAGE" == "$MERGE_PR_COMMIT_MESSAGE_PATTERN"* ]]; then
