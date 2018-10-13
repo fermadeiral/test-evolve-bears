@@ -29,65 +29,51 @@ GREEN='\033[0;32m'
 
 SCRIPT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 
-case=$(cat bears.json | sed 's/.*"type": "\(.*\)".*/\1/;t;d')
-echo "> Branch from $case case."
+CASE=$(cat bears.json | sed 's/.*"type": "\(.*\)".*/\1/;t;d')
+echo "> Branch from $CASE case."
 
-if [ "$case" == "failing_passing" ]; then
+if [ "$CASE" == "failing_passing" ]; then
     echo "> 3 commits must exist."
-
-    echo "> Checking commits..."
-
-    bugCommitId=`git log --format=format:%H --grep="Bug commit"`
-    patchCommitId=`git log --format=format:%H --grep="Human patch"`
-    endCommitId=`git log --format=format:%H --grep="End of the bug and patch reproduction process"`
-
-    echo "Buggy commit: $bugCommitId"
-    checkCommit "$bugCommitId"
-    echo "Patched commit: $patchCommitId"
-    checkCommit "$patchCommitId"
-    echo "End of the process commit: $endCommitId"
-    checkCommit "$endCommitId"
-
-    echo "> Checking parent commits..."
-
-    parentEndCommit=`git log --pretty=%P -n 1 "$endCommitId"`
-    parentPatchCommit=`git log --pretty=%P -n 1 "$patchCommitId"`
-
-    echo "End of the process commit's parent: $parentEndCommit"
-    checkParent "$parentEndCommit" "$patchCommitId"
-    echo "Patched commit's parent: $parentPatchCommit"
-    checkParent "$parentPatchCommit" "$bugCommitId"
 else
     echo "> 4 commits must exist."
+fi
 
-    echo "> Checking commits..."
+BUGGY_COMMIT_ID=$(git log --format=format:%H --grep="Bug commit")
+TEST_COMMIT_ID=$(git log --format=format:%H --grep="Changes in the tests")
+PATCHED_COMMIT_ID=$(git log --format=format:%H --grep="Human patch")
+END_COMMIT_ID=$(git log --format=format:%H --grep="End of the bug and patch reproduction process")
 
-    bugCommitId=`git log --format=format:%H --grep="Bug commit"`
-    testCommitId=`git log --format=format:%H --grep="Changes in the tests"`
-    patchCommitId=`git log --format=format:%H --grep="Human patch"`
-    endCommitId=`git log --format=format:%H --grep="End of the bug and patch reproduction process"`
+echo "> Checking commits..."
 
-    echo "Buggy commit: $bugCommitId"
-    checkCommit "$bugCommitId"
-    echo "Changes in the tests commit: $testCommitId"
-    checkCommit "$testCommitId"
-    echo "Patched commit: $patchCommitId"
-    checkCommit "$patchCommitId"
-    echo "End of the process commit: $endCommitId"
-    checkCommit "$endCommitId"
+echo "Buggy commit: $BUGGY_COMMIT_ID"
+checkCommit "$BUGGY_COMMIT_ID"
+if [ "$CASE" == "passing_passing" ]; then
+    echo "Changes in the tests commit: $TEST_COMMIT_ID"
+    checkCommit "$TEST_COMMIT_ID"
+fi
+echo "Patched commit: $PATCHED_COMMIT_ID"
+checkCommit "$PATCHED_COMMIT_ID"
+echo "End of the process commit: $END_COMMIT_ID"
+checkCommit "$END_COMMIT_ID"
 
-    echo "> Checking parent commits..."
+echo "> Checking parent commits..."
 
-    parentEndCommit=`git log --pretty=%P -n 1 "$endCommitId"`
-    parentPatchCommit=`git log --pretty=%P -n 1 "$patchCommitId"`
-    parentTestCommit=`git log --pretty=%P -n 1 "$testCommitId"`
+PARENT_END_COMMIT=`git log --pretty=%P -n 1 "$END_COMMIT_ID"`
+PARENT_PATCHED_COMMIT=`git log --pretty=%P -n 1 "$PATCHED_COMMIT_ID"`
 
-    echo "End of the process commit's parent: $parentEndCommit"
-    checkParent "$parentEndCommit" "$patchCommitId"
-    echo "Patched commit's parent: $parentPatchCommit"
-    checkParent "$parentPatchCommit" "$testCommitId"
-    echo "Changes in the tests commit's parent: $parentTestCommit"
-    checkParent "$parentTestCommit" "$bugCommitId"
+echo "End of the process commit's parent: $PARENT_END_COMMIT"
+checkParent "$PARENT_END_COMMIT" "$PATCHED_COMMIT_ID"
+
+if [ "$CASE" == "failing_passing" ]; then
+    echo "Patched commit's parent: $PARENT_PATCHED_COMMIT"
+    checkParent "$PARENT_PATCHED_COMMIT" "$BUGGY_COMMIT_ID"
+else
+    PARENT_TEST_COMMIT=`git log --pretty=%P -n 1 "$TEST_COMMIT_ID"`
+
+    echo "Patched commit's parent: $PARENT_PATCHED_COMMIT"
+    checkParent "$PARENT_PATCHED_COMMIT" "$TEST_COMMIT_ID"
+    echo "Changes in the tests commit's parent: $PARENT_TEST_COMMIT"
+    checkParent "$PARENT_TEST_COMMIT" "$BUGGY_COMMIT_ID"
 fi
 
 RESULT="$BRANCH_NAME [OK]"
