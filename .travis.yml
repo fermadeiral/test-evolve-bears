@@ -82,8 +82,6 @@ jobs:
           fi
       after_script:
         - if [[ "$TRAVIS_COMMIT_MESSAGE" == "$MERGE_PR_COMMIT_MESSAGE_PATTERN"* ]]; then
-            # git stash is used in the case that something wrong had happen in the previous scripts
-            # so it's still possible to checkout and reset the branch pr-add-bug
             git stash;
             git checkout pr-add-bug;
             ./.travis_bears/add_bug/reset_pr-add-bug_branch.sh;
