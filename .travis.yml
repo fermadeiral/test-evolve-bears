@@ -75,7 +75,6 @@ jobs:
       after_success:
         - if [[ "$TRAVIS_COMMIT_MESSAGE" == "$MERGE_PR_COMMIT_MESSAGE_PATTERN"* ]]; then
             git checkout pr-add-bug;
-            chmod +x ./.travis_bears/add_bug/*.sh;
             ./.travis_bears/add_bug/update_data.sh;
           fi
       after_script:
