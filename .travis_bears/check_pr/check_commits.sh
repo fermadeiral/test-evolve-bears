@@ -4,8 +4,7 @@ set -e
 
 function checkCommit {
     if [ -z "$1" ]; then
-        RESULT="$BRANCH_NAME [FAILURE] (some commit is missing)"
-        echo -e "$RED$RESULT"
+        echo -e "$RED$BRANCH_NAME [FAILURE] (some commit is missing)"
         exit 1
     else
         echo "> The commit is OK."
@@ -14,8 +13,7 @@ function checkCommit {
 
 function checkParent {
     if [ "$1" != "$2" ]; then
-        RESULT="$BRANCH_NAME [FAILURE] (the commits are not in the right sequence)"
-        echo -e "$RED$RESULT"
+        echo -e "$RED$BRANCH_NAME [FAILURE] (the commits are not in the right sequence)"
         exit 1
     else
         echo "> The parent commit is OK."
@@ -76,5 +74,4 @@ else
     checkParent "$PARENT_TEST_COMMIT" "$BUGGY_COMMIT_ID"
 fi
 
-RESULT="$BRANCH_NAME [OK]"
-echo -e "$GREEN$RESULT"
+echo -e "$GREEN$BRANCH_NAME [OK]"
