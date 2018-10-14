@@ -20,6 +20,10 @@ jobs:
       if: type = pull_request
       script: ./.travis_bears/check_pr/check_commits.sh;
 
+    - stage: Validation - check existence of java file in the patched commit
+      if: type = pull_request
+      script: ./.travis_bears/check_pr/check_existence_java_file.sh;
+
     - stage: Validation - check existence of build and test log files in the buggy and patched commits
       if: type = pull_request
       script: ./.travis_bears/check_pr/check_existence_of_build_and_test_log_files.sh;
