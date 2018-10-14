@@ -6,87 +6,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] Building Gumtree Spoon AST Diff 10-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
-[INFO] Downloading: https://oss.sonatype.org/content/repositories/snapshots/fr/inria/gforge/spoon/spoon-core/7.1.0-SNAPSHOT/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/fr/inria/gforge/spoon/spoon-core/7.1.0-SNAPSHOT/maven-metadata.xml
-[INFO] Downloaded: http://maven.inria.fr/artifactory/spoon-public-snapshot/fr/inria/gforge/spoon/spoon-core/7.1.0-SNAPSHOT/maven-metadata.xml (1017 B at 0.9 KB/sec)
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.core.resources/maven-metadata.xml
-[INFO] Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.resources/maven-metadata.xml
-[INFO] Downloading: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/platform/org.eclipse.core.resources/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.core.resources/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/triskell-public-release/org/eclipse/platform/org.eclipse.core.resources/maven-metadata.xml
-[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.resources/maven-metadata.xml (458 B at 0.6 KB/sec)
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.core.expressions/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.core.expressions/maven-metadata.xml
-[INFO] Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.expressions/maven-metadata.xml
-[INFO] Downloading: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/platform/org.eclipse.core.expressions/maven-metadata.xml
-[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.expressions/maven-metadata.xml (458 B at 1.5 KB/sec)
-[INFO] Downloading: http://maven.inria.fr/artifactory/triskell-public-release/org/eclipse/platform/org.eclipse.core.expressions/maven-metadata.xml
-[INFO] Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.runtime/maven-metadata.xml
-[INFO] Downloading: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/platform/org.eclipse.core.runtime/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.core.runtime/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.core.runtime/maven-metadata.xml
-[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.runtime/maven-metadata.xml (450 B at 1.5 KB/sec)
-[INFO] Downloading: http://maven.inria.fr/artifactory/triskell-public-release/org/eclipse/platform/org.eclipse.core.runtime/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.osgi/maven-metadata.xml
-[INFO] Downloading: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/platform/org.eclipse.osgi/maven-metadata.xml
-[INFO] Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.osgi/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.osgi/maven-metadata.xml
-[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.osgi/maven-metadata.xml (547 B at 1.9 KB/sec)
-[INFO] Downloading: http://maven.inria.fr/artifactory/triskell-public-release/org/eclipse/platform/org.eclipse.osgi/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.equinox.common/maven-metadata.xml
-[INFO] Downloading: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/platform/org.eclipse.equinox.common/maven-metadata.xml
-[INFO] Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.common/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.equinox.common/maven-metadata.xml
-[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.common/maven-metadata.xml (456 B at 1.7 KB/sec)
-[INFO] Downloading: http://maven.inria.fr/artifactory/triskell-public-release/org/eclipse/platform/org.eclipse.equinox.common/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.core.jobs/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.core.jobs/maven-metadata.xml
-[INFO] Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.jobs/maven-metadata.xml
-[INFO] Downloading: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/platform/org.eclipse.core.jobs/maven-metadata.xml
-[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.jobs/maven-metadata.xml (544 B at 1.9 KB/sec)
-[INFO] Downloading: http://maven.inria.fr/artifactory/triskell-public-release/org/eclipse/platform/org.eclipse.core.jobs/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.equinox.registry/maven-metadata.xml
-[INFO] Downloading: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/platform/org.eclipse.equinox.registry/maven-metadata.xml
-[INFO] Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.registry/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.equinox.registry/maven-metadata.xml
-[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.registry/maven-metadata.xml (456 B at 1.7 KB/sec)
-[INFO] Downloading: http://maven.inria.fr/artifactory/triskell-public-release/org/eclipse/platform/org.eclipse.equinox.registry/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.equinox.preferences/maven-metadata.xml
-[INFO] Downloading: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/platform/org.eclipse.equinox.preferences/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.equinox.preferences/maven-metadata.xml
-[INFO] Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.preferences/maven-metadata.xml
-[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.preferences/maven-metadata.xml (459 B at 1.7 KB/sec)
-[INFO] Downloading: http://maven.inria.fr/artifactory/triskell-public-release/org/eclipse/platform/org.eclipse.equinox.preferences/maven-metadata.xml
-[INFO] Downloading: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/platform/org.eclipse.core.contenttype/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.core.contenttype/maven-metadata.xml
-[INFO] Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.contenttype/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.core.contenttype/maven-metadata.xml
-[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.contenttype/maven-metadata.xml (456 B at 1.6 KB/sec)
-[INFO] Downloading: http://maven.inria.fr/artifactory/triskell-public-release/org/eclipse/platform/org.eclipse.core.contenttype/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.equinox.app/maven-metadata.xml
-[INFO] Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.app/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.equinox.app/maven-metadata.xml
-[INFO] Downloading: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/platform/org.eclipse.equinox.app/maven-metadata.xml
-[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.equinox.app/maven-metadata.xml (422 B at 1.5 KB/sec)
-[INFO] Downloading: http://maven.inria.fr/artifactory/triskell-public-release/org/eclipse/platform/org.eclipse.equinox.app/maven-metadata.xml
-[INFO] Downloading: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/platform/org.eclipse.core.filesystem/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.core.filesystem/maven-metadata.xml
-[INFO] Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.filesystem/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.core.filesystem/maven-metadata.xml
-[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.filesystem/maven-metadata.xml (455 B at 1.6 KB/sec)
-[INFO] Downloading: http://maven.inria.fr/artifactory/triskell-public-release/org/eclipse/platform/org.eclipse.core.filesystem/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.text/maven-metadata.xml
-[INFO] Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.text/maven-metadata.xml
-[INFO] Downloading: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/platform/org.eclipse.text/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.text/maven-metadata.xml
-[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.text/maven-metadata.xml (440 B at 1.6 KB/sec)
-[INFO] Downloading: http://maven.inria.fr/artifactory/triskell-public-release/org/eclipse/platform/org.eclipse.text/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.core.commands/maven-metadata.xml
-[INFO] Downloading: http://maven.inria.fr/artifactory/spoon-public-snapshot/org/eclipse/platform/org.eclipse.core.commands/maven-metadata.xml
-[INFO] Downloading: https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/platform/org.eclipse.core.commands/maven-metadata.xml
-[INFO] Downloading: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.commands/maven-metadata.xml
-[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/eclipse/platform/org.eclipse.core.commands/maven-metadata.xml (484 B at 1.5 KB/sec)
-[INFO] Downloading: http://maven.inria.fr/artifactory/triskell-public-release/org/eclipse/platform/org.eclipse.core.commands/maven-metadata.xml
 [INFO] 
 [INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ gumtree-spoon-ast-diff ---
 [INFO] Skipping Rule Enforcement.
@@ -107,12 +26,6 @@
 [INFO] 
 [INFO] --- maven-surefire-plugin:2.16:test (default-test) @ gumtree-spoon-ast-diff ---
 [INFO] Surefire report directory: /root/workspace/SpoonLabs/gumtree-spoon-ast-diff/431628140/target/surefire-reports
-[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.16/surefire-junit4-2.16.pom
-[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.16/surefire-junit4-2.16.pom (3 KB at 9.0 KB/sec)
-[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.16/surefire-providers-2.16.pom
-[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.16/surefire-providers-2.16.pom (3 KB at 8.5 KB/sec)
-[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.16/surefire-junit4-2.16.jar
-[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.16/surefire-junit4-2.16.jar (63 KB at 119.0 KB/sec)
 
 -------------------------------------------------------
  T E S T S
@@ -15359,10 +15272,10 @@ Path: #containedType[name=QuickNotepad]#comment[index=7]
 Element: spoon.support.reflect.code.CtCommentImpl@480ade3b
 Path: #containedType[name=QuickNotepad]#comment[index=8]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=notifyNewBounds(boolean,boolean)]
-path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=requestFocusInWindow(boolean)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=requestFocusInWindow()]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=requestFocusInWindow(sun.awt.CausedFocusEvent$Cause)]
+path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=requestFocusInWindow(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=requestFocusInWindow(boolean,sun.awt.CausedFocusEvent$Cause)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=requestFocusInWindow(sun.awt.CausedFocusEvent$Cause)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=mouseDown(java.awt.Event,int,int)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getInputVerifier()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getLocation(java.awt.Point)]
@@ -15405,8 +15318,8 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#m
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getAncestorListeners()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=findComponentAtImpl(int,int,boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=isMinimumSizeSet()]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setBounds(java.awt.Rectangle)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setBounds(int,int,int,int)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setBounds(java.awt.Rectangle)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=isRecursivelyVisible()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=lightweightPaint(java.awt.Graphics)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=getChildAt(java.awt.Component,int,int,boolean)]
@@ -15433,8 +15346,8 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#m
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=setVerifyInputWhenFocusTarget(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=getComponents()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=setInputVerifier(javax.swing.InputVerifier)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=createImage(int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=createImage(java.awt.image.ImageProducer)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=createImage(int,int)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getFlag(int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=doLayout()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=setVisible(boolean)]
@@ -15455,9 +15368,9 @@ path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponen
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=list(java.io.PrintStream,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=list(java.io.PrintWriter,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setDropTarget(java.awt.dnd.DropTarget)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=list(java.io.PrintWriter)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=list()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=list(java.io.PrintStream)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=list(java.io.PrintWriter)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=recycleRectangle(java.awt.Rectangle)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=dropLocationForPoint(java.awt.Point)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=getAccessibleChild(int)]
@@ -15522,14 +15435,14 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#m
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=isManagingFocus()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=countHierarchyMembers()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=addContainerListener(java.awt.event.ContainerListener)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=findComponentAt(int,int)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=findComponentAt(java.awt.Point)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=findComponentAt(int,int,boolean)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=findComponentAt(java.awt.Point)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=findComponentAt(int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=minimumSize()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getBoundsOp()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getComponentOrientation()]
-path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=registerWithKeyboardManager(boolean)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=registerWithKeyboardManager(javax.swing.KeyStroke)]
+path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=registerWithKeyboardManager(boolean)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=setComponentPopupMenu(javax.swing.JPopupMenu)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=paintToOffscreen(java.awt.Graphics,int,int,int,int,int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=isLightweight()]
@@ -15537,12 +15450,12 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#m
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=isComponentObtainingGraphicsFrom(java.awt.Component)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=isSameOrAncestorOf(java.awt.Component,boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=isInstanceOf(java.lang.Object,java.lang.String)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=transferFocus(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=transferFocus()]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=transferFocus(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=setComponentZOrder(java.awt.Component,int)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getInputMap(int,boolean)]
-path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getInputMap()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getInputMap(int)]
+path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getInputMap()]
 path #subPackage[name=java]#subPackage[name=lang]#containedType[name=Object]#method[signature=wait(long,int)]
 path #subPackage[name=java]#subPackage[name=lang]#containedType[name=Object]#method[signature=wait(long)]
 path #subPackage[name=java]#subPackage[name=lang]#containedType[name=Object]#method[signature=wait()]
@@ -15563,8 +15476,8 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#m
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=isFocusTraversableOverridden()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=hide()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getPreferredSize()]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=prepareImage(java.awt.Image,java.awt.image.ImageObserver)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=prepareImage(java.awt.Image,int,int,java.awt.image.ImageObserver)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=prepareImage(java.awt.Image,java.awt.image.ImageObserver)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=disable()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=eventEnabled(java.awt.AWTEvent)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getToolTipText(java.awt.event.MouseEvent)]
@@ -15572,8 +15485,8 @@ path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponen
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getBorder()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=isPaintingForPrint()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setBoundsOp(int)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=getMouseEventTarget(int,int,boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=getMouseEventTarget(int,int,boolean,java.awt.Container$EventTargetFilter,boolean)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=getMouseEventTarget(int,int,boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=mouseExit(java.awt.Event,int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=adjustDecendantsOnParent(int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getSiblingIndexBelow()]
@@ -15605,8 +15518,8 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#m
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setRequestFocusController(sun.awt.RequestFocusController)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=initializeFocusTraversalKeys()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=lightweightPrint(java.awt.Graphics)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=isFocusCycleRoot(java.awt.Container)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=isFocusCycleRoot()]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=isFocusCycleRoot(java.awt.Container)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=getComponentZOrder(java.awt.Component)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=setEnabled(boolean)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=printAll(java.awt.Graphics)]
@@ -15614,14 +15527,14 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#m
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=transferFocusUpCycle()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=findTraversalRoot()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=isFocusTraversalPolicyProvider()]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setSize(int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setSize(java.awt.Dimension)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=recursiveApplyCurrentShape(int)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setSize(int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=recursiveApplyCurrentShape(int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=recursiveApplyCurrentShape()]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=recursiveApplyCurrentShape(int)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getGraphics()]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setLocation(java.awt.Point)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setLocation(int,int)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setLocation(java.awt.Point)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getVisibleRect()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=isCoalescingEnabled()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=dispatchEventToSelf(java.awt.AWTEvent)]
@@ -15736,15 +15649,15 @@ path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponen
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=update(java.awt.Graphics)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=fetchRectangle()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=isFocusTraversalPolicySet()]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=show(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=show()]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=show(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=coalesceEvents(java.awt.AWTEvent,java.awt.AWTEvent)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=printHeavyweightComponents(java.awt.Graphics)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=imageUpdate(java.awt.Image,int,int,int,int,int)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=processComponentKeyEvent(java.awt.event.KeyEvent)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=getContainerListeners()]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=checkImage(java.awt.Image,int,int,java.awt.image.ImageObserver)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=checkImage(java.awt.Image,java.awt.image.ImageObserver)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=checkImage(java.awt.Image,int,int,java.awt.image.ImageObserver)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=addKeyListener(java.awt.event.KeyListener)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=processKeyBinding(javax.swing.KeyStroke,java.awt.event.KeyEvent,int,boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=addMouseWheelListener(java.awt.event.MouseWheelListener)]
@@ -15755,8 +15668,8 @@ path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponen
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=registerNextFocusableComponent(java.awt.Component)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=processKeyBindingsForAllComponents(java.awt.event.KeyEvent,java.awt.Container,boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getCursor()]
-path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=unregisterWithKeyboardManager()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=unregisterWithKeyboardManager(javax.swing.KeyStroke)]
+path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=unregisterWithKeyboardManager()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=registerKeyboardAction(java.awt.event.ActionListener,javax.swing.KeyStroke,int)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=registerKeyboardAction(java.awt.event.ActionListener,java.lang.String,javax.swing.KeyStroke,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getKeyListeners()]
@@ -15787,16 +15700,16 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#m
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getMousePosition()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getObscuredState(int,int,int,int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getContainer()]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,byte,byte)]
-path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=firePropertyChange(java.lang.String,int,int)]
-path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=firePropertyChange(java.lang.String,char,char)]
-path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=firePropertyChange(java.lang.String,boolean,boolean)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getAccessControlContext()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,float,float)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,java.lang.Object,java.lang.Object)]
+path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=firePropertyChange(java.lang.String,char,char)]
+path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=firePropertyChange(java.lang.String,int,int)]
+path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=firePropertyChange(java.lang.String,boolean,boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,long,long)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,short,short)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,double,double)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getAccessControlContext()]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,short,short)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,java.lang.Object,java.lang.Object)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,byte,byte)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setFocusable(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=addMouseMotionListener(java.awt.event.MouseMotionListener)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=setOpaque(boolean)]
@@ -15813,9 +15726,9 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#m
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=repaint(long,int,int,int,int)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=repaint(java.awt.Rectangle)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=numListening(long)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=repaint(int,int,int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=repaint()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=repaint(long)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=repaint(int,int,int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=bounds()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getMouseMotionListeners()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=setMinimumSize(java.awt.Dimension)]
@@ -15838,8 +15751,8 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#m
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=setCreatedDoubleBuffer(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=getDropTargetEventTarget(int,int,boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=isPreferredSizeSet()]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getPropertyChangeListeners()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getPropertyChangeListeners(java.lang.String)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getPropertyChangeListeners()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getColorModel()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=processHierarchyEvent(java.awt.event.HierarchyEvent)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=validateUnconditionally()]
@@ -15885,8 +15798,8 @@ path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JPanel]#m
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=isAutoFocusTransferOnDisposal()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getLocationOnWindow()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getToolkitImpl()]
-path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getActionMap()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getActionMap(boolean)]
+path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getActionMap()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=isAncestorOf(java.awt.Component)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=compWriteObjectNotify()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getTopLevelAncestor()]
@@ -15901,10 +15814,10 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#m
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setLocale(java.util.Locale)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=addVetoableChangeListener(java.beans.VetoableChangeListener)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=_paintImmediately(int,int,int,int)]
-path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=requestFocus()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=requestFocus(boolean)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=requestFocus(boolean,sun.awt.CausedFocusEvent$Cause)]
+path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=requestFocus()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=requestFocus(sun.awt.CausedFocusEvent$Cause)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=requestFocus(boolean,sun.awt.CausedFocusEvent$Cause)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=removeComponentListener(java.awt.event.ComponentListener)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=resetKeyboardActions()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getInheritsPopupMenu()]
@@ -15916,22 +15829,22 @@ path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponen
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=setBackground(java.awt.Color)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=invalidateTree()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setFocusTraversalKeysEnabled(boolean)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=recursiveSubtractAndApplyShape(sun.java2d.pipe.Region,int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=recursiveSubtractAndApplyShape(sun.java2d.pipe.Region)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=recursiveSubtractAndApplyShape(sun.java2d.pipe.Region,int)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=recursiveSubtractAndApplyShape(sun.java2d.pipe.Region,int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getToolkit()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=paintBorder(java.awt.Graphics)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setIgnoreRepaint(boolean)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getVetoableChangeListeners()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=processContainerEvent(java.awt.event.ContainerEvent)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=requestFocusHelper(boolean,boolean,sun.awt.CausedFocusEvent$Cause)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=requestFocusHelper(boolean,boolean)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=requestFocusHelper(boolean,boolean,sun.awt.CausedFocusEvent$Cause)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=checkGD(java.lang.String)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=repaintParentIfNeeded(int,int,int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=removeFocusListener(java.awt.event.FocusListener)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=enableEvents(long)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=transferFocusBackward(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=transferFocusBackward()]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=transferFocusBackward(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=move(int,int)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=printBorder(java.awt.Graphics)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getAncestorNotifier()]
@@ -15956,10 +15869,10 @@ path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponen
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getGraphics_NoClientCode()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getSize()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=notifyNewBounds(boolean,boolean)]
-path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=requestFocusInWindow(boolean)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=requestFocusInWindow()]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=requestFocusInWindow(sun.awt.CausedFocusEvent$Cause)]
+path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=requestFocusInWindow(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=requestFocusInWindow(boolean,sun.awt.CausedFocusEvent$Cause)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=requestFocusInWindow(sun.awt.CausedFocusEvent$Cause)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=mouseDown(java.awt.Event,int,int)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getInputVerifier()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getLocation(java.awt.Point)]
@@ -16002,8 +15915,8 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#m
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getAncestorListeners()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=findComponentAtImpl(int,int,boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=isMinimumSizeSet()]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setBounds(java.awt.Rectangle)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setBounds(int,int,int,int)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setBounds(java.awt.Rectangle)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=isRecursivelyVisible()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=lightweightPaint(java.awt.Graphics)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=getChildAt(java.awt.Component,int,int,boolean)]
@@ -16030,8 +15943,8 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#m
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=setVerifyInputWhenFocusTarget(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=getComponents()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=setInputVerifier(javax.swing.InputVerifier)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=createImage(int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=createImage(java.awt.image.ImageProducer)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=createImage(int,int)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getFlag(int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=doLayout()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=setVisible(boolean)]
@@ -16052,9 +15965,9 @@ path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponen
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=list(java.io.PrintStream,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=list(java.io.PrintWriter,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setDropTarget(java.awt.dnd.DropTarget)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=list(java.io.PrintWriter)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=list()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=list(java.io.PrintStream)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=list(java.io.PrintWriter)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=recycleRectangle(java.awt.Rectangle)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=dropLocationForPoint(java.awt.Point)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=getAccessibleChild(int)]
@@ -16119,14 +16032,14 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#m
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=isManagingFocus()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=countHierarchyMembers()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=addContainerListener(java.awt.event.ContainerListener)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=findComponentAt(int,int)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=findComponentAt(java.awt.Point)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=findComponentAt(int,int,boolean)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=findComponentAt(java.awt.Point)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=findComponentAt(int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=minimumSize()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getBoundsOp()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getComponentOrientation()]
-path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=registerWithKeyboardManager(boolean)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=registerWithKeyboardManager(javax.swing.KeyStroke)]
+path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=registerWithKeyboardManager(boolean)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=setComponentPopupMenu(javax.swing.JPopupMenu)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=paintToOffscreen(java.awt.Graphics,int,int,int,int,int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=isLightweight()]
@@ -16134,12 +16047,12 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#m
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=isComponentObtainingGraphicsFrom(java.awt.Component)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=isSameOrAncestorOf(java.awt.Component,boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=isInstanceOf(java.lang.Object,java.lang.String)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=transferFocus(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=transferFocus()]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=transferFocus(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=setComponentZOrder(java.awt.Component,int)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getInputMap(int,boolean)]
-path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getInputMap()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getInputMap(int)]
+path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getInputMap()]
 path #subPackage[name=java]#subPackage[name=lang]#containedType[name=Object]#method[signature=wait(long,int)]
 path #subPackage[name=java]#subPackage[name=lang]#containedType[name=Object]#method[signature=wait(long)]
 path #subPackage[name=java]#subPackage[name=lang]#containedType[name=Object]#method[signature=wait()]
@@ -16160,8 +16073,8 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#m
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=isFocusTraversableOverridden()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=hide()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getPreferredSize()]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=prepareImage(java.awt.Image,java.awt.image.ImageObserver)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=prepareImage(java.awt.Image,int,int,java.awt.image.ImageObserver)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=prepareImage(java.awt.Image,java.awt.image.ImageObserver)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=disable()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=eventEnabled(java.awt.AWTEvent)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getToolTipText(java.awt.event.MouseEvent)]
@@ -16169,8 +16082,8 @@ path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponen
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getBorder()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=isPaintingForPrint()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setBoundsOp(int)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=getMouseEventTarget(int,int,boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=getMouseEventTarget(int,int,boolean,java.awt.Container$EventTargetFilter,boolean)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=getMouseEventTarget(int,int,boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=mouseExit(java.awt.Event,int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=adjustDecendantsOnParent(int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getSiblingIndexBelow()]
@@ -16202,8 +16115,8 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#m
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setRequestFocusController(sun.awt.RequestFocusController)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=initializeFocusTraversalKeys()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=lightweightPrint(java.awt.Graphics)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=isFocusCycleRoot(java.awt.Container)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=isFocusCycleRoot()]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=isFocusCycleRoot(java.awt.Container)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=getComponentZOrder(java.awt.Component)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=setEnabled(boolean)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=printAll(java.awt.Graphics)]
@@ -16211,14 +16124,14 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#m
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=transferFocusUpCycle()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=findTraversalRoot()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=isFocusTraversalPolicyProvider()]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setSize(int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setSize(java.awt.Dimension)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=recursiveApplyCurrentShape(int)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setSize(int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=recursiveApplyCurrentShape(int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=recursiveApplyCurrentShape()]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=recursiveApplyCurrentShape(int)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getGraphics()]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setLocation(java.awt.Point)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setLocation(int,int)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setLocation(java.awt.Point)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getVisibleRect()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=isCoalescingEnabled()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=dispatchEventToSelf(java.awt.AWTEvent)]
@@ -16333,15 +16246,15 @@ path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponen
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=update(java.awt.Graphics)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=fetchRectangle()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=isFocusTraversalPolicySet()]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=show(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=show()]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=show(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=coalesceEvents(java.awt.AWTEvent,java.awt.AWTEvent)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=printHeavyweightComponents(java.awt.Graphics)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=imageUpdate(java.awt.Image,int,int,int,int,int)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=processComponentKeyEvent(java.awt.event.KeyEvent)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=getContainerListeners()]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=checkImage(java.awt.Image,int,int,java.awt.image.ImageObserver)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=checkImage(java.awt.Image,java.awt.image.ImageObserver)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=checkImage(java.awt.Image,int,int,java.awt.image.ImageObserver)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=addKeyListener(java.awt.event.KeyListener)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=processKeyBinding(javax.swing.KeyStroke,java.awt.event.KeyEvent,int,boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=addMouseWheelListener(java.awt.event.MouseWheelListener)]
@@ -16352,8 +16265,8 @@ path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponen
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=registerNextFocusableComponent(java.awt.Component)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=processKeyBindingsForAllComponents(java.awt.event.KeyEvent,java.awt.Container,boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getCursor()]
-path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=unregisterWithKeyboardManager()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=unregisterWithKeyboardManager(javax.swing.KeyStroke)]
+path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=unregisterWithKeyboardManager()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=registerKeyboardAction(java.awt.event.ActionListener,javax.swing.KeyStroke,int)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=registerKeyboardAction(java.awt.event.ActionListener,java.lang.String,javax.swing.KeyStroke,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getKeyListeners()]
@@ -16384,16 +16297,16 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#m
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getMousePosition()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getObscuredState(int,int,int,int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getContainer()]
-path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=firePropertyChange(java.lang.String,int,int)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=firePropertyChange(java.lang.String,char,char)]
+path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=firePropertyChange(java.lang.String,int,int)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=firePropertyChange(java.lang.String,boolean,boolean)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,float,float)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,java.lang.Object,java.lang.Object)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,long,long)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getAccessControlContext()]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,byte,byte)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,short,short)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,float,float)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,double,double)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,short,short)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,java.lang.Object,java.lang.Object)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=firePropertyChange(java.lang.String,byte,byte)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getAccessControlContext()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setFocusable(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=addMouseMotionListener(java.awt.event.MouseMotionListener)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=setOpaque(boolean)]
@@ -16410,9 +16323,9 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#m
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=repaint(long,int,int,int,int)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=repaint(java.awt.Rectangle)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=numListening(long)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=repaint(int,int,int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=repaint()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=repaint(long)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=repaint(int,int,int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=bounds()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getMouseMotionListeners()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=setMinimumSize(java.awt.Dimension)]
@@ -16435,8 +16348,8 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#m
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=setCreatedDoubleBuffer(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=getDropTargetEventTarget(int,int,boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=isPreferredSizeSet()]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getPropertyChangeListeners()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getPropertyChangeListeners(java.lang.String)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getPropertyChangeListeners()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getColorModel()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=processHierarchyEvent(java.awt.event.HierarchyEvent)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=validateUnconditionally()]
@@ -16482,8 +16395,8 @@ path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JPanel]#m
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=isAutoFocusTransferOnDisposal()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getLocationOnWindow()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getToolkitImpl()]
-path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getActionMap()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getActionMap(boolean)]
+path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getActionMap()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=isAncestorOf(java.awt.Component)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=compWriteObjectNotify()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getTopLevelAncestor()]
@@ -16498,10 +16411,10 @@ path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#m
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setLocale(java.util.Locale)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=addVetoableChangeListener(java.beans.VetoableChangeListener)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=_paintImmediately(int,int,int,int)]
-path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=requestFocus()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=requestFocus(boolean)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=requestFocus(boolean,sun.awt.CausedFocusEvent$Cause)]
+path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=requestFocus()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=requestFocus(sun.awt.CausedFocusEvent$Cause)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=requestFocus(boolean,sun.awt.CausedFocusEvent$Cause)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=removeComponentListener(java.awt.event.ComponentListener)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=resetKeyboardActions()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getInheritsPopupMenu()]
@@ -16513,22 +16426,22 @@ path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponen
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=setBackground(java.awt.Color)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=invalidateTree()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setFocusTraversalKeysEnabled(boolean)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=recursiveSubtractAndApplyShape(sun.java2d.pipe.Region,int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=recursiveSubtractAndApplyShape(sun.java2d.pipe.Region)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=recursiveSubtractAndApplyShape(sun.java2d.pipe.Region,int)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=recursiveSubtractAndApplyShape(sun.java2d.pipe.Region,int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=getToolkit()]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=paintBorder(java.awt.Graphics)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=setIgnoreRepaint(boolean)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getVetoableChangeListeners()]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=processContainerEvent(java.awt.event.ContainerEvent)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=requestFocusHelper(boolean,boolean,sun.awt.CausedFocusEvent$Cause)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=requestFocusHelper(boolean,boolean)]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=requestFocusHelper(boolean,boolean,sun.awt.CausedFocusEvent$Cause)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Container]#method[signature=checkGD(java.lang.String)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=repaintParentIfNeeded(int,int,int,int)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=removeFocusListener(java.awt.event.FocusListener)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=enableEvents(long)]
-path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=transferFocusBackward(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=transferFocusBackward()]
+path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=transferFocusBackward(boolean)]
 path #subPackage[name=java]#subPackage[name=awt]#containedType[name=Component]#method[signature=move(int,int)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=printBorder(java.awt.Graphics)]
 path #subPackage[name=javax]#subPackage[name=swing]#containedType[name=JComponent]#method[signature=getAncestorNotifier()]
@@ -31702,7 +31615,7 @@ Element: spoon.support.reflect.code.CtCommentImpl@5f00a4e7
 Path: #containedType[name=QuickNotepad]#comment[index=7]
 Element: spoon.support.reflect.code.CtCommentImpl@480ade3b
 Path: #containedType[name=QuickNotepad]#comment[index=8]
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.129 sec - in gumtree.spoon.TreeTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.375 sec - in gumtree.spoon.TreeTest
 Running gumtree.spoon.AstComparatorTest
 Insert Method at org.apache.commons.cli.CommandLine:207
 	private org.apache.commons.cli.Option resolveOptionNew(java.lang.String opt) {
@@ -31735,39 +31648,18 @@ root: 2
 DeleteOperation CtIfImpl 445
 MoveOperation CtIfImpl 448
 all: 10
-Tests run: 81, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 77.261 sec <<< FAILURE! - in gumtree.spoon.AstComparatorTest
-test_t_209184_buggy_allopsNPE(gumtree.spoon.AstComparatorTest)  Time elapsed: 1.867 sec  <<< FAILURE!
-java.lang.AssertionError: null
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at org.junit.Assert.assertNotNull(Assert.java:712)
-	at org.junit.Assert.assertNotNull(Assert.java:722)
-	at gumtree.spoon.AstComparatorTest.test_t_209184_buggy_allopsNPE(AstComparatorTest.java:379)
-
+Tests run: 81, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 50.452 sec - in gumtree.spoon.AstComparatorTest
 Running gumtree.spoon.diff.DiffTest
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.865 sec - in gumtree.spoon.diff.DiffTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.578 sec - in gumtree.spoon.diff.DiffTest
 
 Results :
 
-Failed tests: 
-  AstComparatorTest.test_t_209184_buggy_allopsNPE:379 null
-
-Tests run: 97, Failures: 1, Errors: 0, Skipped: 1
+Tests run: 97, Failures: 0, Errors: 0, Skipped: 1
 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 02:33 min
-[INFO] Finished at: 2018-10-15T00:05:13+02:00
-[INFO] Final Memory: 15M/154M
+[INFO] Total time: 01:16 min
+[INFO] Finished at: 2018-10-15T00:09:59+02:00
+[INFO] Final Memory: 11M/94M
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.16:test (default-test) on project gumtree-spoon-ast-diff: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /root/workspace/SpoonLabs/gumtree-spoon-ast-diff/431628140/target/surefire-reports for the individual test results.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
