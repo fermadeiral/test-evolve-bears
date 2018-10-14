@@ -5,6 +5,8 @@ import json
 
 branch = sys.argv[1]
 
+branches_per_version_file_path = os.path.join("releases", "branches_per_version.json")
+
 # check out master
 cmd = "git checkout -qf master;"
 subprocess.call(cmd, shell=True)
