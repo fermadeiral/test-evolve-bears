@@ -202,7 +202,7 @@ angular.module('bears-bugs', ['ngRoute', 'ui.bootstrap', 'anguFixedHeaderTable']
 		$rootScope.$on('previous_bug', previousBug);
 	})
 	.controller('mainController', function($scope, $rootScope, $location, $window, $rootScope, $http, $uibModal) {
-		$scope.sortType     = ['repository.name', 'bugId']; // set the default sort type
+		$scope.sortType     = ['bugId', 'repository.name']; // set the default sort type
 		$scope.sortReverse  = false;
 		$scope.match  = "all";
 		$scope.filter   = {};
