@@ -60,6 +60,9 @@ jobs:
             fixerBuildId=$(jq '.builds.fixerBuild.id' bears.json);
             NEW_BRANCH_NAME=$repoName-$buggyBuildId-$fixerBuildId;
             echo "Branch to be created - $NEW_BRANCH_NAME";
+
+            git config --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/*;
+            git fetch;
           fi
       script:
         - if [[ "$TRAVIS_COMMIT_MESSAGE" == "$MERGE_PR_COMMIT_MESSAGE_PATTERN"* ]]; then
