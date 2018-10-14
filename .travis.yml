@@ -23,6 +23,10 @@ jobs:
       if: type = pull_request
       script: ./.travis_bears/check_pr/check_commits.sh;
 
+    - stage: Validation - build and test log files
+      if: type = pull_request
+      script: ./.travis_bears/check_pr/check_exitence_of_build_and_test_log_files.sh;
+
     - stage: Validation - check non-existence of the bug in Bears
       if: type = pull_request
       install: ./.travis_bears/install/install_jq.sh

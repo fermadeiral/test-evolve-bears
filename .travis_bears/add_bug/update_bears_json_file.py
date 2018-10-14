@@ -33,7 +33,7 @@ with open('bears.json', 'r') as f:
     data = json.load(f)
 
 # add into bears.json the property { "bugId": "Bears_X" }
-data['bugId'] = "Bears_" + (NUMBER_OF_BRANCHES + 1)
+data['bugId'] = "Bears_" + str(NUMBER_OF_BRANCHES + 1)
 
 # add into bears.json the property { "version": "latest" }
 data['version'] = "latest"
