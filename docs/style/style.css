@@ -81,7 +81,12 @@ label {
 	padding: 10px 4px 3px 18px;
 }
 
-.side-nav li h2, .side-nav li h4, .side-nav li h5, .side-nav li div {
+.side-nav li h4 {
+	padding: 3px 4px 3px 18px;
+	margin: 0;
+}
+
+.side-nav li h2, .side-nav li h5, .side-nav li div {
 	padding: 3px 4px 3px 18px;
 	margin: 0;
 }
