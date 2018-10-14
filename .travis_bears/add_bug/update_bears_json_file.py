@@ -4,6 +4,23 @@ import json
 
 branch = sys.argv[1]
 
+# check out master
+cmd = "git checkout -qf master;"
+subprocess.call(cmd, shell=True)
+
+# read the json file containing all branches per version
+versions = None
+if os.path.exists(branches_per_version_file_path):
+    with open(branches_per_version_file_path,'r') as f:
+        try:
+            versions = json.load(f)
+        except Exception as e:
+            print("got %s on json.load()" % e)
+
+NUMBER_OF_BRANCHES=0
+for version in versions:
+    NUMBER_OF_BRANCHES=NUMBER_OF_BRANCHES+len(version)
+
 # check out new created branch
 cmd = "git checkout -qf %s;" % branch
 subprocess.call(cmd, shell=True)
@@ -11,6 +28,9 @@ subprocess.call(cmd, shell=True)
 # read bears.json
 with open('bears.json', 'r') as f:
     data = json.load(f)
+
+# add into bears.json the property { "bugId": "Bears_X" }
+data['bugId'] = "Bears_" + NUMBER_OF_BRANCHES
 
 # add into bears.json the property { "version": "latest" }
 data['version'] = "latest"
