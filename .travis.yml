@@ -13,8 +13,6 @@ jobs:
   include:
     - stage: Validation - check existence and validity of bears.json file
       if: type = pull_request
-      language: node_js
-      node_js: "10"
       install: ./.travis_bears/install/install_ajv.sh
       script: ./.travis_bears/check_pr/check_bears_json_file.sh;
 
