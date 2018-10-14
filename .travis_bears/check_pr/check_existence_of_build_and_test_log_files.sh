@@ -2,6 +2,9 @@
 
 set -e
 
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+
 BUILD_LOG_FILE_NAME="repairnator.maven.buildproject.log"
 TEST_LOG_FILE_NAME="repairnator.maven.testproject.log"
 
