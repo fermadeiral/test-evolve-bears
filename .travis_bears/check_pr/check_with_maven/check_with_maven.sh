@@ -19,7 +19,7 @@ cd pr
 buggyCommitId=""
 
 case=$(cat bears.json | sed 's/.*"type": "\(.*\)".*/\1/;t;d')
-echo "Branch from case $case"
+echo "> Branch from case $case"
 if [ "$case" == "failing_passing" ]; then
     buggyCommitId=`git log --format=format:%H --grep="Bug commit"`
 else
@@ -30,7 +30,7 @@ patchedCommitId=`git log --format=format:%H --grep="Human patch"`
 
 if [ "$IS_BUGGY_COMMIT" -eq 1 ]; then
 
-    echo "Checking out the buggy commit: $buggyCommitId"
+    echo "> Checking out the buggy commit: $buggyCommitId"
     git log --format=%B -n 1 $buggyCommitId
 
     git checkout -q $buggyCommitId
@@ -41,14 +41,13 @@ if [ "$IS_BUGGY_COMMIT" -eq 1 ]; then
 
     status=$?
     if [ "$status" -eq 0 ]; then
-        RESULT="$BRANCH_NAME [FAILURE] (bug reproduction - status = $status)"
-        >&2 echo -e "$RED $RESULT $NC"
+        echo -e "$RED $BRANCH_NAME [FAILURE] (bug reproduction - status = $status)"
         exit 1
     fi
 
 else
 
-    echo "Checking out the patched commit: $patchedCommitId"
+    echo "> Checking out the patched commit: $patchedCommitId"
     git log --format=%B -n 1 $patchedCommitId
 
     git checkout -q $patchedCommitId
@@ -59,11 +58,9 @@ else
 
     status=$?
     if [ "$status" -ne 0 ]; then
-        RESULT="$BRANCH_NAME [FAILURE] (patch reproduction - status = $status)"
-        >&2 echo -e "$RED $RESULT $NC"
+        echo -e "$RED $BRANCH_NAME [FAILURE] (patch reproduction - status = $status)"
         exit 1
     fi
 fi
 
-RESULT="$BRANCH_NAME [OK]"
-echo -e "$GREEN $RESULT $NC"
+echo -e "$GREEN $BRANCH_NAME [OK]"

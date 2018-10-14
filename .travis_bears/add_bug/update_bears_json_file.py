@@ -22,7 +22,6 @@ if os.path.exists(branches_per_version_file_path):
 
 NUMBER_OF_BRANCHES=0
 for version in versions:
-    print versions[version];
     NUMBER_OF_BRANCHES=NUMBER_OF_BRANCHES+len(versions[version])
 
 # check out new created branch

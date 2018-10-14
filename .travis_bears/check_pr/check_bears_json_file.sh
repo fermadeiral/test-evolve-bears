@@ -20,15 +20,12 @@ if [ -e "bears.json" ]; then
     if ajv test -s $JSON_SCHEMA -d bears.json --valid ; then
         echo "> bears.json is valid in $BRANCH_NAME"
     else
-        RESULT="$BRANCH_NAME [FAILURE] (bears.json is invalid)"
-        echo -e "$RED$RESULT"
+        echo -e "$RED $BRANCH_NAME [FAILURE] (bears.json is invalid)"
         exit 1
     fi
 else
-    RESULT="$BRANCH_NAME [FAILURE] (bears.json does not exist)"
-    echo -e "$RED$RESULT"
+    echo -e "$RED $BRANCH_NAME [FAILURE] (bears.json does not exist)"
     exit 1
 fi
 
-RESULT="$BRANCH_NAME [OK]"
-echo -e "$GREEN$RESULT"
+echo -e "$GREEN $BRANCH_NAME [OK]"
