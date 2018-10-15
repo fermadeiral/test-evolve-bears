@@ -168,3 +168,8 @@ table tr:hover {
 .navbar-header a {
 	color: #FFFFFF;
 }
+
+.modal-header h5 a {
+    color: #337AB7;
+    text-decoration: underline;
+}
