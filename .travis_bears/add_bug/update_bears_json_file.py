@@ -20,28 +20,29 @@ if os.path.exists(branches_per_version_file_path):
         except Exception as e:
             print("got %s on json.load()" % e)
 
-NUMBER_OF_BRANCHES=0
-for version in versions:
-    NUMBER_OF_BRANCHES=NUMBER_OF_BRANCHES+len(versions[version])
+if versions is not None:
+    NUMBER_OF_BRANCHES=0
+    for version in versions:
+        NUMBER_OF_BRANCHES=NUMBER_OF_BRANCHES+len(versions[version])
 
-# check out new created branch
-cmd = "git checkout -qf %s;" % BRANCH_NAME
-subprocess.call(cmd, shell=True)
+    # check out new created branch
+    cmd = "git checkout -qf %s;" % BRANCH_NAME
+    subprocess.call(cmd, shell=True)
 
-# read bears.json
-with open('bears.json', 'r') as f:
-    data = json.load(f)
+    # read bears.json
+    with open('bears.json', 'r') as f:
+        data = json.load(f)
 
-# add into bears.json the property { "bugId": "Bears_X" }
-data['bugId'] = "Bears_" + str(NUMBER_OF_BRANCHES + 1)
+    # add into bears.json the property { "bugId": "Bears_X" }
+    data['bugId'] = "Bears_" + str(NUMBER_OF_BRANCHES + 1)
 
-# add into bears.json the property { "version": "latest" }
-data['version'] = "latest"
+    # add into bears.json the property { "version": "latest" }
+    data['version'] = "latest"
 
-# write bears.json
-with open('bears.json', 'w') as f:
-    f.write(json.dumps(data, indent=2))
+    # write bears.json
+    with open('bears.json', 'w') as f:
+        f.write(json.dumps(data, indent=2))
 
-# update branch
-cmd = "git add bears.json; git commit --amend --no-edit; git push -f github;"
-subprocess.call(cmd, shell=True)
+    # update branch
+    cmd = "git add bears.json; git commit --amend --no-edit; git push -f github;"
+    subprocess.call(cmd, shell=True)

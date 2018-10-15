@@ -16,13 +16,13 @@ else
     echo "> JSON schema path: $JSON_SCHEMA"
 fi
 
-if [ -e "bears.json" ]; then
-    if [ ! ajv test -s $JSON_SCHEMA -d bears.json --valid ]; then
-        echo -e "$RED$BRANCH_NAME [FAILURE] (bears.json is invalid)"
-        exit 1
-    fi
-else
+if [ ! -e "bears.json" ]; then
     echo -e "$RED$BRANCH_NAME [FAILURE] (bears.json does not exist)"
+    exit 1
+fi
+
+if [ ! ajv test -s $JSON_SCHEMA -d bears.json --valid ]; then
+    echo -e "$RED$BRANCH_NAME [FAILURE] (bears.json is invalid)"
     exit 1
 fi
 

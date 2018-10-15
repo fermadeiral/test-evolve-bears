@@ -56,8 +56,8 @@ checkCommit "$END_COMMIT_ID"
 
 echo "> Checking parent commits..."
 
-PARENT_END_COMMIT=`git log --pretty=%P -n 1 "$END_COMMIT_ID"`
-PARENT_PATCHED_COMMIT=`git log --pretty=%P -n 1 "$PATCHED_COMMIT_ID"`
+PARENT_END_COMMIT=$(git log --pretty=%P -n 1 "$END_COMMIT_ID")
+PARENT_PATCHED_COMMIT=$(git log --pretty=%P -n 1 "$PATCHED_COMMIT_ID")
 
 echo "End of the process commit's parent: $PARENT_END_COMMIT"
 checkParent "$PARENT_END_COMMIT" "$PATCHED_COMMIT_ID"
@@ -66,7 +66,7 @@ if [ "$CASE" == "failing_passing" ]; then
     echo "Patched commit's parent: $PARENT_PATCHED_COMMIT"
     checkParent "$PARENT_PATCHED_COMMIT" "$BUGGY_COMMIT_ID"
 else
-    PARENT_TEST_COMMIT=`git log --pretty=%P -n 1 "$TEST_COMMIT_ID"`
+    PARENT_TEST_COMMIT=$(git log --pretty=%P -n 1 "$TEST_COMMIT_ID")
 
     echo "Patched commit's parent: $PARENT_PATCHED_COMMIT"
     checkParent "$PARENT_PATCHED_COMMIT" "$TEST_COMMIT_ID"

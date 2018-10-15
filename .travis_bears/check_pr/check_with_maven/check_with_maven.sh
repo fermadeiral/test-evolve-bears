@@ -41,7 +41,7 @@ if [ "$IS_BUGGY_COMMIT" -eq 1 ]; then
 
     status=$?
     if [ "$status" -eq 0 ]; then
-        echo -e "$RED$BRANCH_NAME [FAILURE] (bug reproduction - status = $status)"
+        echo -e "$RED$BRANCH_NAME [FAILURE] (bug reproduction - status = 0)"
         exit 1
     fi
 

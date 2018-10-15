@@ -29,7 +29,7 @@ jobs:
 
     - stage: Validation - check the existence of build and test log files in the buggy and patched commits
       if: type = pull_request
-      script: ./.travis_bears/check_pr/check_existence_of_build_and_test_log_files.sh;
+      script: ./.travis_bears/check_pr/check_existence_build_and_test_log_files.sh;
 
     - stage: Validation - check the non-existence of the bug in Bears
       if: type = pull_request
@@ -55,6 +55,7 @@ jobs:
             git checkout pr-add-bug;
             echo "> Last 10 commits:";
             git log -n 10;
+
             COMMITTER_USERNAME=$(git log -n 1 --skip 1 --pretty="%cn");
             COMMITTER_EMAIL=$(git log -n 1 --skip 1 --pretty="%ce");
             git config --global user.name "$COMMITTER_USERNAME";
@@ -64,12 +65,12 @@ jobs:
             git remote add github https://${GH_TOKEN}@github.com/"$TRAVIS_REPO_SLUG".git > /dev/null 2>&1;
 
             git checkout pr-add-bug;
-            repoName=$(jq '.repository.name' bears.json);
-            repoName=$(echo "$repoName" | sed -e 's/\"//g');
-            repoName=$(echo "$repoName" | sed -e 's/\//-/g');
-            buggyBuildId=$(jq '.builds.buggyBuild.id' bears.json);
-            fixerBuildId=$(jq '.builds.fixerBuild.id' bears.json);
-            NEW_BRANCH_NAME=$repoName-$buggyBuildId-$fixerBuildId;
+            REPO_SLUG=$(jq '.repository.name' bears.json);
+            REPO_SLUG=$(echo "$REPO_SLUG" | sed -e 's/\"//g');
+            REPO_SLUG=$(echo "$REPO_SLUG" | sed -e 's/\//-/g');
+            BUGGY_BUILD_ID=$(jq '.builds.buggyBuild.id' bears.json);
+            PATCHED_BUILD_ID=$(jq '.builds.fixerBuild.id' bears.json);
+            NEW_BRANCH_NAME=$REPO_SLUG-$BUGGY_BUILD_ID-$PATCHED_BUILD_ID;
             echo "Branch to be created - $NEW_BRANCH_NAME";
 
             git config --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/*;
