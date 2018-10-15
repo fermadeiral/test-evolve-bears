@@ -2,6 +2,11 @@
 
 set -e
 
+BRANCH_NAME="$TRAVIS_PULL_REQUEST_BRANCH"
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+
 function checkCommit {
     if [ -z "$1" ]; then
         echo -e "$RED$BRANCH_NAME [FAILURE] (some commit is missing)"
@@ -20,11 +25,6 @@ function checkParent {
     fi
 }
 
-BRANCH_NAME="$TRAVIS_PULL_REQUEST_BRANCH"
-
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-
 SCRIPT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 
 CASE=$(cat bears.json | sed 's/.*"type": "\(.*\)".*/\1/;t;d')
@@ -36,10 +36,10 @@ else
     echo "> 4 commits must exist."
 fi
 
-BUGGY_COMMIT_ID=$(git log --format=format:%H --grep="Bug commit")
-TEST_COMMIT_ID=$(git log --format=format:%H --grep="Changes in the tests")
-PATCHED_COMMIT_ID=$(git log --format=format:%H --grep="Human patch")
-END_COMMIT_ID=$(git log --format=format:%H --grep="End of the bug and patch reproduction process")
+BUGGY_COMMIT_ID=$(git log --format=format:%H --grep="$BUGGY_COMMIT_MESSAGE_PATTERN")
+TEST_COMMIT_ID=$(git log --format=format:%H --grep="$TEST_COMMIT_MESSAGE_PATTERN")
+PATCHED_COMMIT_ID=$(git log --format=format:%H --grep="$PATCHED_COMMIT_MESSAGE_PATTERN")
+END_COMMIT_ID=$(git log --format=format:%H --grep="$END_COMMIT_MESSAGE_PATTERN")
 
 echo "> Checking commits..."
 

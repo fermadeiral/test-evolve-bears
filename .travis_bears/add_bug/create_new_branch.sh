@@ -2,10 +2,10 @@
 
 set -e
 
-BUGGY_COMMIT_ID=$(git log --format=format:%H --grep="Bug commit")
-TEST_COMMIT_ID=$(git log --format=format:%H --grep="Changes in the tests")
-PATCHED_COMMIT_ID=$(git log --format=format:%H --grep="Human patch")
-END_COMMIT_ID=$(git log --format=format:%H --grep="End of the bug and patch reproduction process")
+BUGGY_COMMIT_ID=$(git log --format=format:%H --grep="$BUGGY_COMMIT_MESSAGE_PATTERN")
+TEST_COMMIT_ID=$(git log --format=format:%H --grep="$TEST_COMMIT_MESSAGE_PATTERN")
+PATCHED_COMMIT_ID=$(git log --format=format:%H --grep="$PATCHED_COMMIT_MESSAGE_PATTERN")
+END_COMMIT_ID=$(git log --format=format:%H --grep="$END_COMMIT_MESSAGE_PATTERN")
 
 git checkout --orphan "$NEW_BRANCH_NAME"
 git reset .

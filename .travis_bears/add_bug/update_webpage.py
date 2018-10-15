@@ -3,12 +3,12 @@ import os
 import subprocess
 import json
 
-branch = sys.argv[1]
-REPO_NAME = sys.argv[2]
+BRANCH_NAME = sys.argv[1]
+REPO_SLUG = sys.argv[2]
 
 all_bears_bugs_json_file = os.path.join("docs", "data", "bears-bugs.json")
 
-cmd = "git checkout %s;" % branch
+cmd = "git checkout %s;" % BRANCH_NAME
 subprocess.call(cmd, shell=True)
 
 cmd = "git rev-parse HEAD~2;"
@@ -23,7 +23,7 @@ human_patch = subprocess.check_output(cmd, shell=True)
 with open('bears.json') as original_json_file:
     bug = json.load(original_json_file)
     bug['repository']['name'] = bug['repository']['name'].replace("/","-")
-    bug['branchUrl'] = "https://github.com/" + REPO_NAME + "/tree/" + branch
+    bug['branchUrl'] = "https://github.com/" + REPO_SLUG + "/tree/" + BRANCH_NAME
     bug['diff'] = human_patch
 
 cmd = "git checkout -qf master;"
@@ -43,7 +43,7 @@ if bugs is not None:
     with open(all_bears_bugs_json_file, 'w') as f:
         f.write(json.dumps(bugs, indent=2))
 
-    cmd = "git add -A; git commit -m '(Automatic commit) Add %s'; git push github;" % branch
+    cmd = "git add -A; git commit -m '(Automatic commit) Add %s'; git push github;" % BRANCH_NAME
     subprocess.call(cmd, shell=True)
 
 cmd = "git checkout pr-add-bug;"

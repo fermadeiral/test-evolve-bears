@@ -16,24 +16,24 @@ MAVEN_TEST_ARGS="-Denforcer.skip=true -Dcheckstyle.skip=true -Dcobertura.skip=tr
 
 cd pr
 
-buggyCommitId=""
+BUGGY_COMMIT_ID=""
 
-case=$(cat bears.json | sed 's/.*"type": "\(.*\)".*/\1/;t;d')
-echo "> Branch from case $case"
-if [ "$case" == "failing_passing" ]; then
-    buggyCommitId=`git log --format=format:%H --grep="Bug commit"`
+CASE=$(cat bears.json | sed 's/.*"type": "\(.*\)".*/\1/;t;d')
+echo "> Branch from case $CASE"
+if [ "$CASE" == "failing_passing" ]; then
+    BUGGY_COMMIT_ID=$(git log --format=format:%H --grep="Bug commit")
 else
-    buggyCommitId=`git log --format=format:%H --grep="Changes in the tests"`
+    BUGGY_COMMIT_ID=$(git log --format=format:%H --grep="Changes in the tests")
 fi
 
-patchedCommitId=`git log --format=format:%H --grep="Human patch"`
+PATCHED_COMMIT_ID=$(git log --format=format:%H --grep="Human patch")
 
 if [ "$IS_BUGGY_COMMIT" -eq 1 ]; then
 
-    echo "> Checking out the buggy commit: $buggyCommitId"
-    git log --format=%B -n 1 $buggyCommitId
+    echo "> Checking out the buggy commit: $BUGGY_COMMIT_ID"
+    git log --format=%B -n 1 $BUGGY_COMMIT_ID
 
-    git checkout -q $buggyCommitId
+    git checkout -q $BUGGY_COMMIT_ID
 
     mvn install -V -DskipTests=true -B  $MAVEN_TEST_ARGS
 
@@ -47,10 +47,10 @@ if [ "$IS_BUGGY_COMMIT" -eq 1 ]; then
 
 else
 
-    echo "> Checking out the patched commit: $patchedCommitId"
-    git log --format=%B -n 1 $patchedCommitId
+    echo "> Checking out the patched commit: $PATCHED_COMMIT_ID"
+    git log --format=%B -n 1 $PATCHED_COMMIT_ID
 
-    git checkout -q $patchedCommitId
+    git checkout -q $PATCHED_COMMIT_ID
 
     mvn install -V -DskipTests=true -B  $MAVEN_TEST_ARGS
 

@@ -3,7 +3,7 @@ import os
 import subprocess
 import json
 
-branch = sys.argv[1]
+BRANCH_NAME = sys.argv[1]
 
 branches_per_version_file_path = os.path.join("releases", "branches_per_version.json")
 
@@ -21,7 +21,7 @@ if os.path.exists(branches_per_version_file_path):
             print("got %s on json.load()" % e)
 
 if versions is not None:
-    versions["latest"].append(branch)
+    versions["latest"].append(BRANCH_NAME)
 
     with open(branches_per_version_file_path,'w') as f:
         f.write(json.dumps(versions, indent=2))

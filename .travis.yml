@@ -6,6 +6,10 @@ env:
   global:
     - secure: "Qrqjw8L8Mu71b1/Lwtlmyf4EyzG1mGdDKmjAlXy29+JHSdhAskF1iIOaFH2SFHuSxJaGM+k9LNRJYdYAzUqxEH0q4Nmk5YvyKiYUl+5HNX2f+C855hGkE/mMKr0PmEncectpY5t7cYRUR0esbvx7AZyvQHSUDu4cPSzrLPGz2nz6K/040C7NGlma4ck9wsILLHvgSJ5HiZB97yLaVKJUave4Kt6hFag5zaHvEPqISs4b2w/cKVsi35JjIgseYITMUuXoVKMR9EDX1J59NLNV3NG3iPN8+tpZzICpY4j3qY7NitfS5o04sD/hZml938R/0cTgVnNP0jlVE1YfhN95p9F3m187r7zUtqLLN4Tf05nrDbCCZi4g6FKRPnLV3g8zU9lKN3I97kOA3Z+0MCy3R7p5sIUEvthypXK5bcFf8FaCLQKWIFex5//Js3Xg5YPnThSUt2SOXly5DbQ0ctElD52V2xTbbqXMohD08uTqmOdTsVQMOyOXNcK9CqX6AtpafNJ2BQzLy+bbO0Npd/OLkT/4PTrAT33ls0/5ptKSeFsaYjOi/uckGjRSOuAxax1PVZLSJut9iGuWtf8t08nkUZw5vAdFu9RF2f/7YcfKogCAVuWLe2tme35aNjMH1licBQi/MuioM+rT/dhRE1wf7lEKWDGPz7BIfO73npbrJJM="
     - DOCKER_TAG=fermadeiral/test-evolve-bears:latest
+    - BUGGY_COMMIT_MESSAGE_PATTERN="Bug commit"
+    - PATCHED_COMMIT_MESSAGE_PATTERN="Human patch"
+    - TEST_COMMIT_MESSAGE_PATTERN="Changes in the tests"
+    - END_COMMIT_MESSAGE_PATTERN="End of the bug and patch reproduction process"
     - NEW_BRANCH_NAME=""
 
 jobs:
@@ -30,7 +34,7 @@ jobs:
     - stage: Validation - check the non-existence of the bug in Bears
       if: type = pull_request
       install: ./.travis_bears/install/install_jq.sh
-      script: ./.travis_bears/check_pr/check_if_bug_already_exists.sh;
+      script: ./.travis_bears/check_pr/check_non_existence_bug_in_bears.sh;
 
     - stage: Validation - run tests with Maven on buggy and patched commits
       if: type = pull_request
@@ -46,7 +50,7 @@ jobs:
       if: type = push
       install: ./.travis_bears/install/install_jq.sh
       before_script:
-        - END_COMMIT_ID=$(git log --format=format:%H --grep="End of the bug and patch reproduction process");
+        - END_COMMIT_ID=$(git log --format=format:%H --grep="$END_COMMIT_MESSAGE_PATTERN");
           if [ ! -z "$END_COMMIT_ID" ]; then
             git checkout pr-add-bug;
             echo "> Last 10 commits:";
@@ -72,22 +76,22 @@ jobs:
             git fetch;
           fi
       script:
-        - END_COMMIT_ID=$(git log --format=format:%H --grep="End of the bug and patch reproduction process");
+        - END_COMMIT_ID=$(git log --format=format:%H --grep="$END_COMMIT_MESSAGE_PATTERN");
           if [ ! -z "$END_COMMIT_ID" ]; then
             ./.travis_bears/add_bug/create_new_branch.sh;
           fi
       after_success:
-        - END_COMMIT_ID=$(git log --format=format:%H --grep="End of the bug and patch reproduction process");
+        - END_COMMIT_ID=$(git log --format=format:%H --grep="$END_COMMIT_MESSAGE_PATTERN");
           if [ ! -z "$END_COMMIT_ID" ]; then
             git checkout pr-add-bug;
             ./.travis_bears/add_bug/update_data.sh;
           fi
       after_script:
-        - END_COMMIT_ID=$(git log --format=format:%H --grep="End of the bug and patch reproduction process");
+        - END_COMMIT_ID=$(git log --format=format:%H --grep="$END_COMMIT_MESSAGE_PATTERN");
             if [ ! -z "$END_COMMIT_ID" ]; then
             git stash;
             git checkout pr-add-bug;
-            ./.travis_bears/add_bug/reset_pr-add-bug_branch.sh;
+            ./.travis_bears/add_bug/reset_branch_pr-add-bug.sh;
           fi
 
 branches:

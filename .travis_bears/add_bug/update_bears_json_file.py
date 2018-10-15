@@ -3,7 +3,7 @@ import os
 import subprocess
 import json
 
-branch = sys.argv[1]
+BRANCH_NAME = sys.argv[1]
 
 branches_per_version_file_path = os.path.join("releases", "branches_per_version.json")
 
@@ -25,7 +25,7 @@ for version in versions:
     NUMBER_OF_BRANCHES=NUMBER_OF_BRANCHES+len(versions[version])
 
 # check out new created branch
-cmd = "git checkout -qf %s;" % branch
+cmd = "git checkout -qf %s;" % BRANCH_NAME
 subprocess.call(cmd, shell=True)
 
 # read bears.json
