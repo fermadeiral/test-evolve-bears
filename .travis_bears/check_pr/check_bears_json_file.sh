@@ -21,7 +21,8 @@ if [ ! -e "bears.json" ]; then
     exit 1
 fi
 
-if [ ! ajv test -s $JSON_SCHEMA -d bears.json --valid ]; then
+if ajv test -s $JSON_SCHEMA -d bears.json --valid; then
+else
     echo -e "$RED$BRANCH_NAME [FAILURE] (bears.json is invalid)"
     exit 1
 fi
