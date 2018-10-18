@@ -18,7 +18,7 @@ cd pr
 
 BUGGY_BUILD_ID=$(jq -r '.["builds"]["buggyBuild"]["id"]' bears.json)
 POM_PATH=$(jq -r '.["reproductionBuggyBuild"]["projectRootPomPath"]' bears.json)
-POM_PATH=$(echo "$POM_PATH" | sed -e "s/.*"$BUGGY_BUILD_ID"\///g")
+POM_PATH=$(echo "$POM_PATH" | sed -e "s/.*$BUGGY_BUILD_ID\///g")
 POM_PATH=$(echo "$POM_PATH" | sed -e 's/pom.xml//g')
 
 cd "$POM_PATH"
