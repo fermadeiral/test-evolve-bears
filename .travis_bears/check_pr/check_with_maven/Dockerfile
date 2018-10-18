@@ -7,6 +7,7 @@ RUN mkdir -p /var/app/pr/
 COPY . /var/app/
 
 RUN echo "Europe/Paris" > /etc/timezone && chmod +x /var/app/*.sh
+RUN sudo apt-get install jq
 
 ENV M2_HOME=$MAVEN_HOME
 
